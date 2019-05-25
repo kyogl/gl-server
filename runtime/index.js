@@ -1,10 +1,16 @@
 const _ =  require('lodash')
 
-const run = function (data, graph) {
-  return {
-    data: data,
-    graph: graph
+class Runtime {
+  constructor(data, graph) {
+    this.data = data
+    this.graph = graph
   }
-};
+  runNode (start) {
+    
+  }
+  run () {
+    return this.runNode(this.graph.start)
+  }
+}
 
-module.exports = run
+module.exports = Runtime

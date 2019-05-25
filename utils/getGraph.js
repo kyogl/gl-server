@@ -6,7 +6,7 @@
 // var uuid = require('uuid/v4')
 
 module.exports = function() {
-  var json = {
+  const json = {
     nodes: [
       {
         id: 'a',

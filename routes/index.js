@@ -1,15 +1,16 @@
-var express = require('express');
-var router = express.Router();
-var getGraph = require('../utils/getGraph');
-var createGraphIndex = require('../utils/graphIndex')
-const runtime = require('../runtime')
+const express = require('express');
+const router = express.Router();
+const getGraph = require('../utils/getGraph');
+const createGraphIndex = require('../utils/graphIndex')
+const Runtime = require('../runtime')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var input = req.query
-  var graph = getGraph();
-  var json = createGraphIndex(graph)
-  const output = runtime(input, json)
+  const input = req.query
+  const graph = getGraph();
+  const json = createGraphIndex(graph)
+  const runtime = new Runtime(input, json)
+  const output = runtime.run()
   res.render('index', {
     title: 'GL-Server',
     graph: JSON.stringify(json, null, 2),

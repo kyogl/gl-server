@@ -1,28 +1,26 @@
 /*
   图索引生成工具
 */
-var _ = require('lodash');
+const _ = require('lodash');
 
-var createGraphIndex = function(data) {
-  data.linkIndex = {}
+const createGraphIndex = function(data) {
   data.links = _.map(data.links, n=>{
     n.id = n.source+''+n.target
     return n
   })
+  data.linkIndex = {}
   _.forEach(data.links, (n, k)=>{
     data.linkIndex[n.id] = k
   })
   data.nodes = _.map(data.nodes, n=>{
-    n.sourceLinks = _.filter(data.links, link=>{
+    n.sourceLinks = _.map(_.filter(data.links, link=>{
       return link.source==n.id
-    })
-    n.sourceLinks = _.map(n.sourceLinks, n=>{
+    }), n=>{
       return n.id
     })
-    n.targetLinks = _.filter(data.links, link=>{
+    n.targetLinks = _.map(_.filter(data.links, link=>{
       return link.target==n.id
-    })
-    n.targetLinks = _.map(n.targetLinks, n=>{
+    }), n=>{
       return n.id
     })
     return n
