@@ -11,7 +11,7 @@ const op = function (data) {
     case 'divide':
       result = a/b
     default :
-      result = a+b
+      result = a*1+b*1
   }
   return result
 }

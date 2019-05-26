@@ -26,7 +26,11 @@ class Runtime {
     }
     if (node.store=='op') {
       const op = opStore[node.type]
-      input = op(node.data)
+      let data = {
+        type: node.data.type,
+        params: _.merge(node.data.params, input)
+      }
+      input = op(data)
       this.log[id].output = input
     }
     if (node.sourceLinks.length==0) {
@@ -49,7 +53,7 @@ class Runtime {
     if (!_.isObject(this.log[id])) {
       this.log[id] = {}
     }
-    this.log[id].input = _.merge(this.log[id].input, input)
+    this.log[id].input = input
     let node = this.getNode(id)
     if (!this.tryRun[id]) {
       this.tryRun[id] = _.after(node.targetLinks.length, ()=>{

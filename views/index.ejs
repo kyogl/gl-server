@@ -6,15 +6,23 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>input: 
-      <textarea style="height:50px;"><%= input %></textarea>
-    </p>
-    <p>graph: 
-        <textarea style="height:100px;"><%= graph %></textarea>
-    </p>
-    <p>output: 
-      <textarea style="height:350px;"><%= output %></textarea>
-    </p>
+    <p style="margin-bottom: 20px;">Welcome to <%= title %></p>
+    <div class="left">
+      <p>input: 
+        <textarea style="height:150px;"><%= input %></textarea>
+      </p>
+      <p>graph: 
+          <textarea style="height:550px;"><%= graph %></textarea>
+      </p>
+    </div>
+    <div class="right">
+      <p>output: 
+        <textarea style="height:200px;"><%= output %></textarea>
+      </p>
+      <p>log: 
+        <textarea style="height:500px;"><%= log %></textarea>
+      </p>
+    </div>
+    
   </body>
 </html>

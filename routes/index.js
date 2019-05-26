@@ -15,7 +15,8 @@ router.get('/', function(req, res, next) {
     title: 'GL-Server',
     graph: JSON.stringify(json, null, 2),
     input: JSON.stringify(input, null, 2),
-    output: JSON.stringify(output, null, 2)
+    output: JSON.stringify(output.output, null, 2),
+    log: JSON.stringify(output.log, null, 2)
   });
 });
 
