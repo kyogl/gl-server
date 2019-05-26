@@ -78,9 +78,24 @@ module.exports = function() {
       },
       {
         id: 'array-8412',
+        store: 'op',
         type: 'array',
         data: {
-          length: 10,
+          params: {
+            length: 5,
+          }
+        }
+      },
+      {
+        id: 'array-2648',
+        store: 'op',
+        type: 'array',
+        data: {
+          params: {
+            type: 'join',
+            a: 'f',
+            b: 2,
+          }
         }
       },
       {
@@ -142,6 +157,10 @@ module.exports = function() {
       },
       {
         source: 'array-8412',
+        target: 'array-2648',
+      },
+      {
+        source: 'array-2648',
         target: 'object-7631',
         outputKey: 'arg',
       },

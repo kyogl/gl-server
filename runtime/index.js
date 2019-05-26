@@ -25,7 +25,14 @@ class Runtime {
     //如果为默认算子库中的算子
     if (node.store=='op') {
       const op = opStore[node.type]
-      let data = _.merge(node.data.params, input)
+      let data = {}
+      if (node.type=='array') {
+        data = _.merge(node.data.params, {
+          array: input
+        })
+      } else {
+        data = _.merge(node.data.params, input)
+      }
       if (node.data.quote) {
         _.forEach(node.data.quote, (v, k)=>{
           let param = this.log[v.id].output
@@ -58,13 +65,6 @@ class Runtime {
       }
       input = data
       this.log[id].output = input
-    //如果是新建数组算子
-    } else if (node.type=='array') {
-      if (node.data.length>0) {
-        this.log[id].output = new Array(node.data.length)
-      } else {
-        this.log[id].output = []
-      }
     //如果不属于任何类型算子
     } else if (node.type=='echo') {
       return this.output = input
