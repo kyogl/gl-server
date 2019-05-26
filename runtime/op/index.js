@@ -1,5 +1,6 @@
 module.exports = {
-  calculate: require('./calculate'),
+  math: require('./math'),
   condition: require('./condition'),
-  array: require('./array')
+  array: require('./array'),
+  string: require('./string')
 }

@@ -2,7 +2,7 @@ const _ = require('lodash')
 
 const op = function (data) {
   let result
-  let args = _.cloneDeep(data.array)
+  let args = _.cloneDeep(data.data)
   switch (data.type) {
     case 'push': 
       args.push(data.a)
@@ -17,6 +17,9 @@ const op = function (data) {
       break
     case 'join':
       result = args.join(data.a)
+      break
+    case 'length':
+      result = args.length
       break
     default :
       if (data.length>0) {

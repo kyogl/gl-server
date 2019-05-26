@@ -28,7 +28,7 @@ class Runtime {
       let data = {}
       if (node.type=='array') {
         data = _.merge(node.data.params, {
-          array: input
+          data: input
         })
       } else {
         data = _.merge(node.data.params, input)

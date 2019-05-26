@@ -13,9 +13,9 @@ module.exports = function() {
         type: 'start'
       },
       {
-        id: 'calculate-1037',
+        id: 'math-1037',
         store: 'op',
-        type: 'calculate',
+        type: 'math',
         data: {
           params: {
             type: 'plus',
@@ -29,9 +29,9 @@ module.exports = function() {
         }
       },
       {
-        id: 'calculate-7630',
+        id: 'math-7630',
         store: 'op',
-        type: 'calculate',
+        type: 'math',
         data: {
           params: {
             type: 'multiply',
@@ -63,7 +63,7 @@ module.exports = function() {
           },
           quote: {
             b: {
-              id: 'calculate-7630',
+              id: 'math-7630',
             }
           }
         }
@@ -105,28 +105,28 @@ module.exports = function() {
     links: [
       {
         source: 'start',
-        target: 'calculate-1037',
+        target: 'math-1037',
         inputKey: 'number',
         outputKey: 'a'
       },
       {
         source: 'start',
-        target: 'calculate-7630',
+        target: 'math-7630',
         inputKey: 'number',
         outputKey: 'a'
       },
       {
-        source: 'calculate-1037',
+        source: 'math-1037',
         target: 'object-8761',
         outputKey: 'result',
       },
       {
-        source: 'calculate-7630',
+        source: 'math-7630',
         target: 'object-8761',
         outputKey: 'result2',
       },
       {
-        source: 'calculate-7630',
+        source: 'math-7630',
         target: 'object-8761',
         outputKey: 'result3',
       },
