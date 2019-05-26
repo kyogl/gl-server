@@ -9,18 +9,34 @@ module.exports = function() {
   const json = {
     nodes: [
       {
-        id: 'a',
+        id: 'start',
         type: 'start'
       },
       {
-        id: 'b',
+        id: 'calculate-1037',
+        store: 'op',
+        type: 'calculate',
+        data: {
+          type: 'plus',
+          params: {
+            a: 5,
+            b: 8
+          }
+        }
+      },
+      {
+        id: 'echo-9823',
         type: 'echo'
       }
     ],
     links: [
       {
-        source: 'a',
-        target: 'b',
+        source: 'start',
+        target: 'calculate-1037',
+      },
+      {
+        source: 'calculate-1037',
+        target: 'echo-9823',
       }
     ],
   };
