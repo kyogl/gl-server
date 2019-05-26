@@ -20,8 +20,8 @@ class Runtime {
   }
   runNext (node, input) {
     let id = node.id
+    this.log[id].output = input
     if (node.type=='echo') {
-      this.log[id].output = input
       return this.output = input
     }
     if (node.store=='op') {
@@ -29,6 +29,15 @@ class Runtime {
       let data = {
         type: node.data.type,
         params: _.merge(node.data.params, input)
+      }
+      if (node.data.quote) {
+        _.forEach(node.data.quote, (v, k)=>{
+          let param = this.log[v.id].output
+          if (v.key) {
+            param = this.log[v.id].output[v.key]
+          }
+          data.params[k] = param
+        })
       }
       input = op(data)
       this.log[id].output = input

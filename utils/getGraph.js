@@ -19,8 +19,12 @@ module.exports = function() {
         data: {
           type: 'plus',
           params: {
-            a: 5,
-            b: 8
+          },
+          quote: {
+            b: {
+              id: 'start',
+              key: 'number'
+            }
           }
         }
       },
