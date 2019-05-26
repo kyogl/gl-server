@@ -5,11 +5,11 @@ const op = function (data) {
   let args = _.cloneDeep(data.array)
   switch (data.type) {
     case 'push': 
-      args.push(data.element)
+      args.push(data.a)
       result = args
       break
     case 'unshift':
-      args.unshift(data.element)
+      args.unshift(data.a)
       result = args
       break
     case 'slice':

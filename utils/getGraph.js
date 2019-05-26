@@ -82,7 +82,7 @@ module.exports = function() {
         type: 'array',
         data: {
           params: {
-            length: 5,
+            length: 0,
           }
         }
       },
@@ -92,9 +92,8 @@ module.exports = function() {
         type: 'array',
         data: {
           params: {
-            type: 'join',
-            a: 'f',
-            b: 2,
+            type: 'push',
+            a: 'f'
           }
         }
       },
