@@ -24,21 +24,24 @@ class Runtime {
     this.log[id].output = input
     if (node.store=='op') {
       const op = opStore[node.type]
-      let data = {
-        type: node.data.type,
-        params: _.merge(node.data.params, input)
-      }
+      let data = _.merge(node.data.params, input)
       if (node.data.quote) {
         _.forEach(node.data.quote, (v, k)=>{
           let param = this.log[v.id].output
           if (v.key) {
             param = this.log[v.id].output[v.key]
           }
-          data.params[k] = param
+          data[k] = param
         })
       }
-      input = op(data)
-      this.log[id].output = input
+      this.log[id].inputOp = data
+      if (node.type=='condition') {
+        this.log[id].condition = op(data)
+        this.log[id].output = data
+      } else {
+        input = op(data)
+        this.log[id].output = input
+      }
     } else if (node.type=='object') {
       let data = _.merge(node.data.params, input)
       if (node.data.quote) {
@@ -58,11 +61,18 @@ class Runtime {
     if (node.sourceLinks.length==0) {
       return
     }
-    _.forEach(node.sourceLinks, linkId=>{
+    let sourceLinks = _.cloneDeep(node.sourceLinks)
+    if (!_.isUndefined(this.log[id].condition)) {
+      sourceLinks = _.filter(sourceLinks, linkId=>{
+        let link = this.getLink(linkId)
+        return link.condition===this.log[id].condition
+      })
+    }
+    _.forEach(sourceLinks, linkId=>{
       let link = this.getLink(linkId)
-      let trueInput = _.cloneDeep(input)
+      let trueInput = _.cloneDeep(this.log[id].output)
       if (link.inputKey) {
-        trueInput = input[link.inputKey]
+        trueInput = this.log[id].output[link.inputKey]
       }
       let trueOutput = trueInput
       if (link.outputKey) {
@@ -83,7 +93,11 @@ class Runtime {
     }
     let node = this.getNode(id)
     if (!this.tryRun[id]) {
-      this.tryRun[id] = _.after(node.targetLinks.length, ()=>{
+      let targetLinks = _.filter(node.targetLinks, linkId=>{
+        let link = this.getLink(linkId)
+        return _.isUndefined(link.condition) || link.condition===true
+      })
+      this.tryRun[id] = _.after(targetLinks.length, ()=>{
         this.runNext(node, input)
       })
     }

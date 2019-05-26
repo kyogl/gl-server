@@ -1,3 +1,4 @@
 module.exports = {
-  calculate: require('./calculate')
+  calculate: require('./calculate'),
+  condition: require('./condition')
 }

@@ -5,7 +5,7 @@ const _ = require('lodash');
 
 const createGraphIndex = function(data) {
   data.links = _.map(data.links, n=>{
-    n.id = n.source+''+n.target
+    n.id = n.source+''+n.target+_.random(0,99999)
     return n
   })
   data.linkIndex = {}

@@ -1,4 +1,4 @@
-//运算算子
+//条件算子
 const _ = require('lodash')
 
 const op = function (data) {
@@ -12,17 +12,20 @@ const op = function (data) {
     b = b*1
   }
   switch (data.type) {
-    case 'minus': 
-      result = a-b
+    case 'gt': 
+      result = a>b
       break
-    case 'multiply':
-      result = a*b
+    case 'gte':
+      result = a>=b
       break
-    case 'divide':
-      result = a/b
+    case 'lt':
+      result = a<b
+      break
+    case 'lte':
+      result = a<=b
       break
     default :
-      result = a+b
+      result = a==b
   }
   return result
 }

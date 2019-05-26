@@ -17,8 +17,8 @@ module.exports = function() {
         store: 'op',
         type: 'calculate',
         data: {
-          type: 'plus',
           params: {
+            type: 'plus',
           },
           quote: {
             b: {
@@ -33,8 +33,8 @@ module.exports = function() {
         store: 'op',
         type: 'calculate',
         data: {
-          type: 'plus',
           params: {
+            type: 'multiply',
             b: 8
           }
         }
@@ -49,6 +49,21 @@ module.exports = function() {
             input: {
               id: 'start',
               key: 'number'
+            }
+          }
+        }
+      },
+      {
+        id: 'condition-1234',
+        store: 'op',
+        type: 'condition',
+        data: {
+          params: {
+            type: 'gte'
+          },
+          quote: {
+            b: {
+              id: 'calculate-7630',
             }
           }
         }
@@ -83,7 +98,21 @@ module.exports = function() {
       },
       {
         source: 'object-8761',
+        target: 'condition-1234',
+        inputKey: 'result',
+        outputKey: 'a'
+      },
+      {
+        source: 'condition-1234',
         target: 'echo-9823',
+        condition: true,
+        inputKey: 'a'
+      },
+      {
+        source: 'condition-1234',
+        target: 'echo-9823',
+        condition: false,
+        inputKey: 'b'
       }
     ],
   };
