@@ -22,6 +22,7 @@ class Runtime {
     let id = node.id
     let input = _.cloneDeep(nodeInput)
     this.log[id].output = input
+    //如果为默认算子库中的算子
     if (node.store=='op') {
       const op = opStore[node.type]
       let data = _.merge(node.data.params, input)
@@ -35,6 +36,7 @@ class Runtime {
         })
       }
       this.log[id].inputOp = data
+      //如果是条件算子
       if (node.type=='condition') {
         this.log[id].condition = op(data)
         this.log[id].output = data
@@ -42,6 +44,7 @@ class Runtime {
         input = op(data)
         this.log[id].output = input
       }
+    //如果是对象组合算子
     } else if (node.type=='object') {
       let data = _.merge(node.data.params, input)
       if (node.data.quote) {
@@ -55,19 +58,30 @@ class Runtime {
       }
       input = data
       this.log[id].output = input
-    } else if (node.type!='start') {
+    //如果是新建数组算子
+    } else if (node.type=='array') {
+      if (node.data.length>0) {
+        this.log[id].output = new Array(node.data.length)
+      } else {
+        this.log[id].output = []
+      }
+    //如果不属于任何类型算子
+    } else if (node.type=='echo') {
       return this.output = input
     }
+    //不满足以上条件则继续向下执行
     if (node.sourceLinks.length==0) {
       return
     }
     let sourceLinks = _.cloneDeep(node.sourceLinks)
+    //过滤不满足条件的执行流
     if (!_.isUndefined(this.log[id].condition)) {
       sourceLinks = _.filter(sourceLinks, linkId=>{
         let link = this.getLink(linkId)
         return link.condition===this.log[id].condition
       })
     }
+    //向下执行算子
     _.forEach(sourceLinks, linkId=>{
       let link = this.getLink(linkId)
       let trueInput = _.cloneDeep(this.log[id].output)
