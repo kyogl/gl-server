@@ -29,6 +29,31 @@ module.exports = function() {
         }
       },
       {
+        id: 'calculate-7630',
+        store: 'op',
+        type: 'calculate',
+        data: {
+          type: 'plus',
+          params: {
+            b: 8
+          }
+        }
+      },
+      {
+        id: 'object-8761',
+        type: 'object',
+        data: {
+          params: {
+          },
+          quote: {
+            input: {
+              id: 'start',
+              key: 'number'
+            }
+          }
+        }
+      },
+      {
         id: 'echo-9823',
         type: 'echo'
       }
@@ -41,7 +66,23 @@ module.exports = function() {
         outputKey: 'a'
       },
       {
+        source: 'start',
+        target: 'calculate-7630',
+        inputKey: 'number',
+        outputKey: 'a'
+      },
+      {
         source: 'calculate-1037',
+        target: 'object-8761',
+        outputKey: 'result',
+      },
+      {
+        source: 'calculate-7630',
+        target: 'object-8761',
+        outputKey: 'result2',
+      },
+      {
+        source: 'object-8761',
         target: 'echo-9823',
       }
     ],
