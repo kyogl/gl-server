@@ -19,22 +19,37 @@ class Runtime {
     return link
   }
   runNext (node, input) {
+    let id = node.id
     if (node.type=='echo') {
+      this.log[id].output = input
       return this.output = input
     }
     if (node.store=='op') {
       const op = opStore[node.type]
       input = op(node.data)
+      this.log[id].output = input
     }
     if (node.sourceLinks.length==0) {
       return
     }
     _.forEach(node.sourceLinks, linkId=>{
       let link = this.getLink(linkId)
-      this.runNode(link.target, input)
+      if (link.inputKey) {
+        input = input[link.inputKey]
+      }
+      let trueInput = _.cloneDeep(input)
+      if (link.outputKey) {
+        trueInput = {}
+        trueInput[link.outputKey] = input
+      }
+      this.runNode(link.target, trueInput)
     })
   }
   runNode (id, input) {
+    if (!_.isObject(this.log[id])) {
+      this.log[id] = {}
+    }
+    this.log[id].input = _.merge(this.log[id].input, input)
     let node = this.getNode(id)
     if (!this.tryRun[id]) {
       this.tryRun[id] = _.after(node.targetLinks.length, ()=>{

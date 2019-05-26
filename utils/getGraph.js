@@ -33,6 +33,8 @@ module.exports = function() {
       {
         source: 'start',
         target: 'calculate-1037',
+        inputKey: 'number',
+        outputKey: 'a'
       },
       {
         source: 'calculate-1037',
