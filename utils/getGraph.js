@@ -87,6 +87,23 @@ module.exports = function() {
         }
       },
       {
+        id: 'each-6555',
+        type: 'each',
+        data: {
+          params: {
+            type: 'for',
+            a: 10,
+          }
+        },
+        start: 'start-9841'
+      },
+      {
+        id: 'start-9841',
+        type: 'start',
+        inputKey: 'value',
+        parent: 'each-6555'
+      },
+      {
         id: 'array-2648',
         store: 'op',
         type: 'array',
@@ -94,8 +111,14 @@ module.exports = function() {
           params: {
             type: 'push',
             a: 'f'
+          },
+          quote: {
+            data: {
+              id: 'array-8412',
+            }
           }
-        }
+        },
+        parent: 'each-6555'
       },
       {
         id: 'echo-9823',
@@ -156,16 +179,21 @@ module.exports = function() {
       },
       {
         source: 'array-8412',
-        target: 'array-2648',
+        target: 'each-6555',
+        outputKey: 'data'
       },
       {
-        source: 'array-2648',
+        source: 'each-6555',
         target: 'object-7631',
         outputKey: 'arg',
       },
       {
         source: 'object-7631',
         target: 'echo-9823',
+      },
+      {
+        source: 'start-9841',
+        target: 'array-2648'
       }
     ],
   };

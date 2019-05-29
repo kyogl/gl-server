@@ -65,6 +65,18 @@ class Runtime {
       }
       input = data
       this.log[id].output = input
+    } else if (node.type=='each') {
+      let data = _.merge(node.data.params, input)
+      // let start = this.getNode(node.start)
+      if (data.type=='for') {
+        for(let i=0; i<data.a; i++) {
+          this.runNode(node.start, {
+            key: i,
+            value: data.data
+          })
+        }
+      }
+      this.log[id].output = data.data
     //如果不属于任何类型算子
     } else if (node.type=='echo') {
       return this.output = input

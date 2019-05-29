@@ -30,7 +30,7 @@ const createGraphIndex = function(data) {
     data.nodeIndex[n.id] = k
   })
   const start = _.find(data.nodes, n=>{
-    return n.type=='start'
+    return n.type=='start' && !n.parent
   })
   data.start = start.id
   return data
