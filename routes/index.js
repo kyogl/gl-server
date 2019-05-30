@@ -27,6 +27,9 @@ router.all('/', function(req, res, next) {
   const json = createGraphIndex(graph)
   const runtime = new Runtime(input, json)
   const output = runtime.run()
+  if (req.body.graph) {
+    return res.json(output);
+  }
   res.render('index', {
     title: 'GL-Server',
     graph: JSON.stringify(graph, null, 2),
