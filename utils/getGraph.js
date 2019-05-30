@@ -5,7 +5,10 @@
 // var _ = require('lodash');
 // var uuid = require('uuid/v4')
 
-module.exports = function() {
+module.exports = function(graphData) {
+  if (graphData) {
+    return graphData
+  }
   const json = {
     nodes: [
       {

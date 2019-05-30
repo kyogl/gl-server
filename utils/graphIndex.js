@@ -3,7 +3,8 @@
 */
 const _ = require('lodash');
 
-const createGraphIndex = function(data) {
+const createGraphIndex = function(graphData) {
+  let data = _.cloneDeep(graphData)
   data.links = _.map(data.links, n=>{
     n.id = n.source+''+n.target+_.random(0,99999)
     return n

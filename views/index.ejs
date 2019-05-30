@@ -8,12 +8,17 @@
     <h1><%= title %></h1>
     <p style="margin-bottom: 20px;">Welcome to <%= title %></p>
     <div class="left">
-      <p>input: 
-        <textarea style="height:150px;"><%= input %></textarea>
-      </p>
-      <p>graph: 
-          <textarea style="height:550px;"><%= graph %></textarea>
-      </p>
+      <form method="POST" action="/">
+        <p>input: 
+          <textarea style="height:150px;" name="input"><%= input %></textarea>
+        </p>
+        <p>graph: 
+          <textarea style="height:550px;" name="graph"><%= graph %></textarea>
+          <button type="submit">
+            Run Graph
+          </button>
+        </p>
+      </form>
     </div>
     <div class="right">
       <p>output: 
