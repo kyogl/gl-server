@@ -76,7 +76,11 @@ class Runtime {
           })
         }
       }
-      this.log[id].output = data.data
+      // this.log[id].output = data.data
+    } else if (node.type=='assignment') {
+      let data = _.merge(node.data.params, input)
+      this.log[id].output = input
+      this.log[data.id].output = input
     //如果不属于任何类型算子
     } else if (node.type=='echo') {
       return this.output = input
@@ -85,7 +89,7 @@ class Runtime {
     if (node.sourceLinks.length==0) {
       return
     }
-    let sourceLinks = _.cloneDeep(node.sourceLinks)
+    let sourceLinks = node.sourceLinks
     //过滤不满足条件的执行流
     if (!_.isUndefined(this.log[id].condition)) {
       sourceLinks = _.filter(sourceLinks, linkId=>{
@@ -96,7 +100,7 @@ class Runtime {
     //向下执行算子
     _.forEach(sourceLinks, linkId=>{
       let link = this.getLink(linkId)
-      let trueInput = _.cloneDeep(this.log[id].output)
+      let trueInput = this.log[id].output
       if (link.inputKey) {
         trueInput = this.log[id].output[link.inputKey]
       }

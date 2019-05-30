@@ -2,7 +2,7 @@ const _ = require('lodash')
 
 const op = function (data) {
   let result
-  let args = _.cloneDeep(data.data)
+  let args =data.data
   switch (data.type) {
     case 'push': 
       args.push(data.a)

@@ -121,6 +121,15 @@ module.exports = function() {
         parent: 'each-6555'
       },
       {
+        id: 'assignment-0299',
+        type: 'assignment',
+        data: {
+          params: {
+            id: 'each-6555'
+          }
+        }
+      },
+      {
         id: 'echo-9823',
         type: 'echo'
       }
@@ -194,6 +203,10 @@ module.exports = function() {
       {
         source: 'start-9841',
         target: 'array-2648'
+      },
+      {
+        source: 'array-2648',
+        target: 'assignment-0299'
       }
     ],
   };
