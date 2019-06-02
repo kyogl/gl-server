@@ -37,6 +37,6 @@ router.all('/', function(req, res, next) {
     output: JSON.stringify(output.output, null, 2),
     log: JSON.stringify(output.log, null, 2)
   });
-});
+})
 
 module.exports = router;
