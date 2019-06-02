@@ -5,7 +5,44 @@ const _ = require('lodash')
 const client = require('../../utils/mongodb');
 const ObjectId = require('mongodb').ObjectId
 
-router.get('/add', (req, res, next)=>{
+const getGraph = require('../../utils/getGraph');
+const createGraphIndex = require('../../utils/graphIndex')
+const Runtime = require('../../runtime')
+
+router.post('/test', function(req, res, next) {
+  if (!req.body.input || !req.body.graph) {
+    return res.json({
+      success: false,
+      message: '数据缺失'
+    })
+  }
+  let input
+  let graphData
+  try {
+    input = JSON.parse(req.body.input)
+  } catch (e) {
+    input = req.body.input
+  }
+  try {
+    graphData = JSON.parse(req.body.graph)
+  } catch (e) {
+    return res.json({
+      success: false,
+      message: '数据格式有误'
+    })
+  }
+  const graph = getGraph(graphData);
+  const json = createGraphIndex(graph)
+  const runtime = new Runtime(input, json)
+  const output = runtime.run()
+  return res.json({
+    success: true,
+    message: '',
+    data: output
+  });
+})
+
+router.post('/add', (req, res, next)=>{
   if (!req.body.title || !_.isObject(req.body.graph)) {
     return res.json({
       success: false,
