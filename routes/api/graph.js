@@ -6,10 +6,25 @@ const client = require('../../utils/mongodb');
 const ObjectId = require('mongodb').ObjectId
 
 const getGraph = require('../../utils/getGraph');
-const createGraphIndex = require('../../utils/graphIndex')
 const Runtime = require('../../runtime')
 
-router.post('/test', function(req, res, next) {
+router.get('/test/:id', async function(req, res, next) {
+  let id = req.params.id
+  const col = client.db("graph").collection("graph");
+  const dbData = await col.findOne({
+    _id: ObjectId(id)
+  })
+  const json = getGraph(dbData.graph)
+  const runtime = new Runtime(req.query.input, json)
+  const data = await runtime.run()
+  return res.json({
+    success: true,
+    message: '',
+    data: data
+  })
+})
+
+router.post('/test', async function(req, res, next) {
   if (!req.body.input || !req.body.graph) {
     return res.json({
       success: false,
@@ -31,15 +46,14 @@ router.post('/test', function(req, res, next) {
       message: '数据格式有误'
     })
   }
-  const graph = getGraph(graphData);
-  const json = createGraphIndex(graph)
+  const json = getGraph(graphData);
   const runtime = new Runtime(input, json)
-  const output = runtime.run()
+  const data = await runtime.run()
   return res.json({
     success: true,
     message: '',
-    data: output
-  });
+    data: data
+  })
 })
 
 router.post('/add', (req, res, next)=>{

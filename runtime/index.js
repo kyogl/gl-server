@@ -1,6 +1,11 @@
 const _ =  require('lodash')
 const opStore = require('./op')
 
+const client = require('../utils/mongodb');
+const ObjectId = require('mongodb').ObjectId
+
+const getGraph = require('../utils/getGraph')
+
 class Runtime {
   constructor(data, graph) {
     this.data = data
@@ -18,7 +23,7 @@ class Runtime {
     let link = this.graph.links[linkIndex]
     return link
   }
-  runNext (node, nodeInput) {
+  async runNext (node, nodeInput) {
     let id = node.id
     let input = _.cloneDeep(nodeInput)
     this.log[id].output = input
@@ -81,9 +86,26 @@ class Runtime {
       let data = _.merge(node.data.params, input)
       this.log[id].output = input
       this.log[data.id].output = input
+    } else if (node.type=='graph') {
+      let data = _.merge(node.data.params, input)
+      const graphId = data.id
+      const col = client.db("graph").collection("graph");
+      const dbData = await col.findOne({
+        _id: ObjectId(graphId)
+      })
+      const graph = getGraph(dbData.graph)
+      const runtime = new Runtime(input, graph)
+      let result = await runtime.run()
+      input = result.output
+      this.log[id].output = input
+      this.log[id].childGraph = result.log
     //如果不属于任何类型算子
     } else if (node.type=='echo') {
-      return this.output = input
+      this.output = input
+      return this.cb({
+        output: this.output,
+        log: this.log
+      })
     }
     //不满足以上条件则继续向下执行
     if (node.sourceLinks.length==0) {
@@ -133,12 +155,16 @@ class Runtime {
     }
     this.tryRun[id]()
   }
-  run () {
-    this.runNode(this.graph.start, this.data)
-    return {
-      output: this.output,
-      log: this.log
-    }
+  async run () {
+    return new Promise((resolve) => {
+      this.cb = ()=>{
+        resolve({
+          output: this.output,
+          log: this.log
+        })
+      }
+      this.runNode(this.graph.start, this.data)
+    })
   }
 }
 
