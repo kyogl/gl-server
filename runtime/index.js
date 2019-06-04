@@ -27,6 +27,15 @@ class Runtime {
     let id = node.id
     let input = _.cloneDeep(nodeInput)
     this.log[id].output = input
+    if (node.data.quote) {
+      _.forEach(node.data.quote, (v, k)=>{
+        let param = this.log[v.id].output
+        if (v.key) {
+          param = this.log[v.id].output[v.key]
+        }
+        node.data.params[k] = param
+      })
+    }
     //如果为默认算子库中的算子
     if (node.store=='op') {
       const op = opStore[node.type]
@@ -37,15 +46,6 @@ class Runtime {
         })
       } else {
         data = _.merge(node.data.params, input)
-      }
-      if (node.data.quote) {
-        _.forEach(node.data.quote, (v, k)=>{
-          let param = this.log[v.id].output
-          if (v.key) {
-            param = this.log[v.id].output[v.key]
-          }
-          data[k] = param
-        })
       }
       this.log[id].inputOp = data
       //如果是条件算子
@@ -59,15 +59,6 @@ class Runtime {
     //如果是对象组合算子
     } else if (node.type=='object') {
       let data = _.merge(node.data.params, input)
-      if (node.data.quote) {
-        _.forEach(node.data.quote, (v,k)=>{
-          let param = this.log[v.id].output
-          if (v.key) {
-            param = this.log[v.id].output[v.key]
-          }
-          data[k] = param
-        })
-      }
       input = data
       this.log[id].output = input
     } else if (node.type=='each') {

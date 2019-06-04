@@ -17,11 +17,7 @@ router.get('/test/:id', async function(req, res, next) {
   const json = getGraph(dbData.graph)
   const runtime = new Runtime(req.query.input, json)
   const data = await runtime.run()
-  return res.json({
-    success: true,
-    message: '',
-    data: data
-  })
+  return res.json(data)
 })
 
 router.post('/test', async function(req, res, next) {
@@ -49,11 +45,7 @@ router.post('/test', async function(req, res, next) {
   const json = getGraph(graphData);
   const runtime = new Runtime(input, json)
   const data = await runtime.run()
-  return res.json({
-    success: true,
-    message: '',
-    data: data
-  })
+  return res.json(data)
 })
 
 router.post('/add', (req, res, next)=>{
