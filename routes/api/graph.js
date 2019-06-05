@@ -8,13 +8,21 @@ const ObjectId = require('mongodb').ObjectId
 const getGraph = require('../../utils/getGraph');
 const Runtime = require('../../runtime')
 
-router.get('/test/:id', async function(req, res, next) {
+router.get('/test/:id', async function(request, res, next) {
+  const req = {
+    headers: request.headers,
+    query: request.query,
+    body: request.body,
+    params: request.params,
+    originalUrl: request.originalUrl,
+    baseUrl: request.baseUrl
+  }
   let id = req.params.id
   const col = client.db("graph").collection("graph");
   const dbData = await col.findOne({
     _id: ObjectId(id)
   })
-  const json = getGraph(dbData.graph)
+  const json = dbData.graph
   const runtime = new Runtime(req.query.input, json)
   const data = await runtime.run()
   return res.json(data)
