@@ -27,7 +27,7 @@ class Runtime {
     let id = node.id
     let input = _.cloneDeep(nodeInput)
     this.log[id].output = input
-    if (node.data.quote) {
+    if (node.data && node.data.quote) {
       _.forEach(node.data.quote, (v, k)=>{
         let param = this.log[v.id].output
         if (v.key) {
@@ -36,17 +36,10 @@ class Runtime {
         node.data.params[k] = param
       })
     }
+    let data = _.merge(node.data.params, input)
     //如果为默认算子库中的算子
     if (node.store=='op') {
       const op = opStore[node.type]
-      let data = {}
-      if (node.type=='array') {
-        data = _.merge(node.data.params, {
-          data: input
-        })
-      } else {
-        data = _.merge(node.data.params, input)
-      }
       this.log[id].inputOp = data
       //如果是条件算子
       if (node.type=='condition') {
@@ -58,11 +51,9 @@ class Runtime {
       }
     //如果是对象组合算子
     } else if (node.type=='object') {
-      let data = _.merge(node.data.params, input)
       input = data
       this.log[id].output = input
     } else if (node.type=='each') {
-      let data = _.merge(node.data.params, input)
       // let start = this.getNode(node.start)
       if (data.type=='for') {
         for(let i=0; i<data.a; i++) {
@@ -74,11 +65,9 @@ class Runtime {
       }
       // this.log[id].output = data.data
     } else if (node.type=='assignment') {
-      let data = _.merge(node.data.params, input)
       this.log[id].output = input
       this.log[data.id].output = input
     } else if (node.type=='graph') {
-      let data = _.merge(node.data.params, input)
       const graphId = data.id
       const col = client.db("graph").collection("graph");
       const dbData = await col.findOne({
