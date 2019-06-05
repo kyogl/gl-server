@@ -64,7 +64,8 @@ router.post('/add', (req, res, next)=>{
   const col = client.db("graph").collection("graph")
   col.insertOne({
     title: req.body.title,
-    graph: req.body.graph
+    graph: getGraph(req.body.graph),
+    ui: req.body.ui
   })
   res.json({
     success: true
@@ -135,7 +136,8 @@ router.post('/update/:id', (req, res, next)=>{
     }, {
       $set:{
         title: req.body.title,
-        graph: req.body.graph
+        graph: getGraph(req.body.graph),
+        ui: req.body.ui
       }
     }, function(err) {
       if (err) {

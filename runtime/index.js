@@ -4,8 +4,6 @@ const opStore = require('./op')
 const client = require('../utils/mongodb');
 const ObjectId = require('mongodb').ObjectId
 
-const getGraph = require('../utils/getGraph')
-
 class Runtime {
   constructor(data, graph) {
     this.data = data
@@ -73,7 +71,7 @@ class Runtime {
       const dbData = await col.findOne({
         _id: ObjectId(graphId)
       })
-      const graph = getGraph(dbData.graph)
+      const graph = dbData.graph
       const runtime = new Runtime(input, graph)
       let result = await runtime.run()
       input = result.output
