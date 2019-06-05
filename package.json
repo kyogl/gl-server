@@ -1,7 +1,7 @@
 {
   "name": "gl-server",
   "version": "1.0.0",
-  "description": "gl website server",
+  "description": "gl runtime server",
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/www",
