@@ -4,6 +4,8 @@ const opStore = require('./op')
 const client = require('../utils/mongodb');
 const ObjectId = require('mongodb').ObjectId
 
+const getGraph = require('../utils/getGraph');
+
 class Runtime {
   constructor(data, graph) {
     this.data = data
@@ -34,7 +36,11 @@ class Runtime {
         node.data.params[k] = param
       })
     }
-    let data = _.merge(node.data.params, input)
+    let params = {}
+    if (node.data) {
+      params = node.data.params
+    }
+    let data =_.merge(params, input)
     //如果为默认算子库中的算子
     if (node.store=='op') {
       const op = opStore[node.type]
@@ -71,7 +77,7 @@ class Runtime {
       const dbData = await col.findOne({
         _id: ObjectId(graphId)
       })
-      const graph = dbData.graph
+      const graph = getGraph(dbData.graph)
       const runtime = new Runtime(input, graph)
       let result = await runtime.run()
       input = result.output

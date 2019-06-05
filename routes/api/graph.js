@@ -22,7 +22,7 @@ router.get('/test/:id', async function(request, res, next) {
   const dbData = await col.findOne({
     _id: ObjectId(id)
   })
-  const json = dbData.graph
+  const json = getGraph(dbData.graph)
   const runtime = new Runtime(req.query.input, json)
   const data = await runtime.run()
   return res.json(data)
