@@ -1,0 +1,328 @@
+{
+  "edges": [
+    {
+      "runOnly": true,
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "20",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "22",
+      "targetAnchor": 0
+    },
+    {
+      "source": "22",
+      "sourceAnchor": 0,
+      "target": "21",
+      "targetAnchor": 2
+    },
+    {
+      "source": "20",
+      "sourceAnchor": 0,
+      "target": "23",
+      "targetAnchor": 0
+    },
+    {
+      "source": "23",
+      "sourceAnchor": 0,
+      "target": "12",
+      "targetAnchor": 0
+    },
+    {
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "21",
+      "targetAnchor": 0
+    },
+    {
+      "source": "21",
+      "sourceAnchor": 0,
+      "target": "24",
+      "targetAnchor": 0
+    },
+    {
+      "source": "24",
+      "sourceAnchor": 0,
+      "target": "20",
+      "targetAnchor": 1
+    },
+    {
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "26",
+      "targetAnchor": 0
+    },
+    {
+      "source": "26",
+      "sourceAnchor": 0,
+      "target": "25",
+      "targetAnchor": 0
+    },
+    {
+      "source": "25",
+      "sourceAnchor": 0,
+      "target": "24",
+      "targetAnchor": 2
+    }
+  ],
+  "nodes": [
+    {
+      "data": [
+        "{}"
+      ],
+      "id": "11",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "start"
+      },
+      "x": 2601,
+      "y": 70
+    },
+    {
+      "id": "12",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "end"
+      },
+      "x": 2661,
+      "y": 474
+    },
+    {
+      "data": [
+        "http://127.0.0.1:8081",
+        ""
+      ],
+      "id": "20",
+      "name": "121.43.169.84",
+      "op": {
+        "desc": "向指定url发送post请求，输出字符串",
+        "func": "post",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "net"
+      },
+      "x": 2457,
+      "y": 328
+    },
+    {
+      "data": [
+        "",
+        "auth",
+        null
+      ],
+      "id": "21",
+      "op": {
+        "desc": "为对象的指定键设置值，输出新的对象",
+        "func": "set",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 3,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2647,
+      "y": 260
+    },
+    {
+      "id": "22",
+      "op": {
+        "func": "/auth.gl",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "child"
+      },
+      "x": 2745,
+      "y": 193
+    },
+    {
+      "id": "23",
+      "op": {
+        "desc": "将字符串转换为json数据",
+        "func": "jsonDecode",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "encoding"
+      },
+      "x": 2687,
+      "y": 399
+    },
+    {
+      "data": [
+        null,
+        "value",
+        null
+      ],
+      "id": "24",
+      "op": {
+        "desc": "为对象的指定键设置值，输出新的对象",
+        "func": "set",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 3,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2837,
+      "y": 327
+    },
+    {
+      "id": "25",
+      "op": {
+        "desc": "将json数据转换为字符串",
+        "func": "jsonEncode",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "encoding"
+      },
+      "x": 3029,
+      "y": 243
+    },
+    {
+      "data": [
+        null,
+        "value"
+      ],
+      "id": "26",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2926,
+      "y": 143
+    }
+  ]
+}

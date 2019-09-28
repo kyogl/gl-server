@@ -1,0 +1,828 @@
+{
+  "edges": [
+    {
+      "source": "9",
+      "sourceAnchor": 0,
+      "target": "11",
+      "targetAnchor": 0
+    },
+    {
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "12",
+      "targetAnchor": 0
+    },
+    {
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "13",
+      "targetAnchor": 0
+    },
+    {
+      "source": "12",
+      "sourceAnchor": 0,
+      "target": "14",
+      "targetAnchor": 0
+    },
+    {
+      "source": "13",
+      "sourceAnchor": 0,
+      "target": "16",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "14",
+      "sourceAnchor": 1,
+      "target": "15",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "16",
+      "sourceAnchor": 1,
+      "target": "17",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "14",
+      "sourceAnchor": 0,
+      "target": "18",
+      "targetAnchor": 0
+    },
+    {
+      "source": "12",
+      "sourceAnchor": 0,
+      "target": "19",
+      "targetAnchor": 1
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "20",
+      "targetAnchor": 2
+    },
+    {
+      "source": "20",
+      "sourceAnchor": 0,
+      "target": "21",
+      "targetAnchor": 0
+    },
+    {
+      "source": "21",
+      "sourceAnchor": 0,
+      "target": "18",
+      "targetAnchor": 0
+    },
+    {
+      "source": "18",
+      "sourceAnchor": 0,
+      "target": "22",
+      "targetAnchor": 0
+    },
+    {
+      "source": "22",
+      "sourceAnchor": 0,
+      "target": "23",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "23",
+      "sourceAnchor": 1,
+      "target": "24",
+      "targetAnchor": 0
+    },
+    {
+      "source": "25",
+      "sourceAnchor": 0,
+      "target": "26",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "26",
+      "sourceAnchor": 0,
+      "target": "27",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "26",
+      "sourceAnchor": 1,
+      "target": "28",
+      "targetAnchor": 1
+    },
+    {
+      "source": "25",
+      "sourceAnchor": 0,
+      "target": "28",
+      "targetAnchor": 0
+    },
+    {
+      "source": "28",
+      "sourceAnchor": 0,
+      "target": "29",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "16",
+      "sourceAnchor": 0,
+      "target": "18",
+      "targetAnchor": 0
+    },
+    {
+      "source": "13",
+      "sourceAnchor": 0,
+      "target": "29",
+      "targetAnchor": 1
+    },
+    {
+      "runOnly": true,
+      "source": "29",
+      "sourceAnchor": 1,
+      "target": "30",
+      "targetAnchor": 0
+    },
+    {
+      "source": "28",
+      "sourceAnchor": 0,
+      "target": "31",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "29",
+      "sourceAnchor": 0,
+      "target": "31",
+      "targetAnchor": 0
+    },
+    {
+      "source": "31",
+      "sourceAnchor": 0,
+      "target": "10",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "23",
+      "sourceAnchor": 0,
+      "target": "25",
+      "targetAnchor": 0
+    },
+    {
+      "source": "18",
+      "sourceAnchor": 0,
+      "target": "25",
+      "targetAnchor": 0
+    }
+  ],
+  "nodes": [
+    {
+      "id": "9",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "start"
+      },
+      "x": 2744,
+      "y": 100
+    },
+    {
+      "id": "10",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "end"
+      },
+      "x": 2581,
+      "y": 1427
+    },
+    {
+      "data": [
+        null,
+        "body"
+      ],
+      "id": "11",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2738,
+      "y": 186
+    },
+    {
+      "data": [
+        null,
+        "name"
+      ],
+      "id": "12",
+      "name": "name",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2615,
+      "y": 282
+    },
+    {
+      "data": [
+        null,
+        "pass"
+      ],
+      "id": "13",
+      "name": "pass",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2856,
+      "y": 283
+    },
+    {
+      "id": "14",
+      "op": {
+        "desc": "判断输入是否为字符串，根据判断结果，执行不同路线的逻辑",
+        "func": "isString",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2574,
+      "y": 381
+    },
+    {
+      "data": [
+        "用户名不能为空"
+      ],
+      "id": "15",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2623,
+      "y": 482
+    },
+    {
+      "id": "16",
+      "op": {
+        "desc": "判断输入是否为字符串，根据判断结果，执行不同路线的逻辑",
+        "func": "isString",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2910,
+      "y": 389
+    },
+    {
+      "data": [
+        "密码不能为空"
+      ],
+      "id": "17",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2950,
+      "y": 482
+    },
+    {
+      "id": "18",
+      "op": {
+        "func": "/request.gl",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "child"
+      },
+      "x": 2419,
+      "y": 614
+    },
+    {
+      "data": [
+        "user:",
+        null
+      ],
+      "id": "19",
+      "op": {
+        "desc": "连接两个字符串，输出新的字符串",
+        "func": "concat",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2299,
+      "y": 346
+    },
+    {
+      "data": [
+        "{}",
+        "key",
+        null
+      ],
+      "id": "20",
+      "op": {
+        "desc": "为对象的指定键设置值，输出新的对象",
+        "func": "set",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 3,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2283,
+      "y": 432
+    },
+    {
+      "data": [
+        null,
+        "action",
+        "get"
+      ],
+      "id": "21",
+      "op": {
+        "desc": "为对象的指定键设置值，输出新的对象",
+        "func": "set",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 3,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2293,
+      "y": 521
+    },
+    {
+      "data": [
+        null,
+        "success"
+      ],
+      "id": "22",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2416,
+      "y": 708
+    },
+    {
+      "id": "23",
+      "op": {
+        "desc": "判断输入是否为true，根据判断结果，执行不同路线的逻辑",
+        "func": "isTrue",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2416,
+      "y": 802
+    },
+    {
+      "data": [
+        "请求服务器失败"
+      ],
+      "id": "24",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2516,
+      "y": 899
+    },
+    {
+      "data": [
+        null,
+        "data"
+      ],
+      "id": "25",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2329,
+      "y": 954
+    },
+    {
+      "data": [
+        null,
+        "\"\""
+      ],
+      "id": "26",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2284,
+      "y": 1056
+    },
+    {
+      "data": [
+        "用户名或密码错误"
+      ],
+      "id": "27",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2231,
+      "y": 1166
+    },
+    {
+      "data": [
+        null,
+        "pass"
+      ],
+      "id": "28",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2646,
+      "y": 1042
+    },
+    {
+      "id": "29",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2811,
+      "y": 1171
+    },
+    {
+      "data": [
+        "用户名或密码错误"
+      ],
+      "id": "30",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2888,
+      "y": 1290
+    },
+    {
+      "id": "31",
+      "op": {
+        "func": "/createAuth.gl",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "child"
+      },
+      "x": 2579,
+      "y": 1306
+    }
+  ]
+}

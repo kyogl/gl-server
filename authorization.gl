@@ -1,0 +1,403 @@
+{
+  "nodes": {
+    "15": {
+      "func": "",
+      "id": "15",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "17",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "16",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "16": {
+      "func": "",
+      "id": "16",
+      "inflow": [
+        "15",
+        "34"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [],
+      "package": "end",
+      "variable": []
+    },
+    "17": {
+      "func": "get",
+      "id": "17",
+      "inflow": [
+        "15"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "header"
+      ],
+      "outflow": [
+        {
+          "id": "18",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "18": {
+      "func": "get",
+      "id": "18",
+      "inflow": [
+        "17"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "Authorization"
+      ],
+      "outflow": [
+        {
+          "id": "19",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "19": {
+      "func": "nth",
+      "id": "19",
+      "inflow": [
+        "18"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        0
+      ],
+      "outflow": [
+        {
+          "id": "20",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "22",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "array",
+      "variable": []
+    },
+    "20": {
+      "func": "eq",
+      "id": "20",
+      "inflow": [
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "21",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "22",
+          "source": 1,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "21": {
+      "func": "",
+      "id": "21",
+      "inflow": [
+        "20"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "凭证为空"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "22": {
+      "func": "replace",
+      "id": "22",
+      "inflow": [
+        "20",
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "Basic ",
+        "",
+        1
+      ],
+      "outflow": [
+        {
+          "id": "26",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "26": {
+      "func": "split",
+      "id": "26",
+      "inflow": [
+        "22"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ":"
+      ],
+      "outflow": [
+        {
+          "id": "27",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "28",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "29",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "27": {
+      "func": "nth",
+      "id": "27",
+      "inflow": [
+        "26"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        0
+      ],
+      "outflow": [
+        {
+          "id": "31",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "36",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "array",
+      "variable": []
+    },
+    "28": {
+      "func": "nth",
+      "id": "28",
+      "inflow": [
+        "26"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        1
+      ],
+      "outflow": [
+        {
+          "id": "34",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "array",
+      "variable": []
+    },
+    "29": {
+      "func": "nth",
+      "id": "29",
+      "inflow": [
+        "26"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        2
+      ],
+      "outflow": [
+        {
+          "id": "32",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "array",
+      "variable": []
+    },
+    "31": {
+      "func": "concat",
+      "id": "31",
+      "inflow": [
+        "27",
+        "36"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "32",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "32": {
+      "func": "concat",
+      "id": "32",
+      "inflow": [
+        "31",
+        "29"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "33",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "33": {
+      "func": "sha1",
+      "id": "33",
+      "inflow": [
+        "32"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "34",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "crypto",
+      "variable": []
+    },
+    "34": {
+      "func": "eq",
+      "id": "34",
+      "inflow": [
+        "33",
+        "28"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "16",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "35",
+          "source": 1,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "35": {
+      "func": "",
+      "id": "35",
+      "inflow": [
+        "34"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "凭证不合法"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "36": {
+      "func": "/auth.gl",
+      "id": "36",
+      "inflow": [
+        "27"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "31",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "child",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "15",
+    "source": 0,
+    "target": 0
+  }
+}

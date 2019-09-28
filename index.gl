@@ -1,0 +1,204 @@
+{
+  "nodes": {
+    "8": {
+      "func": "",
+      "id": "8",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "15",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "16",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "19",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "13": {
+      "func": "httpRouter",
+      "id": "13",
+      "inflow": [
+        "15"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/user",
+        "/user.gl",
+        {}
+      ],
+      "outflow": [],
+      "package": "net",
+      "variable": []
+    },
+    "14": {
+      "func": "httpRouter",
+      "id": "14",
+      "inflow": [
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/reg",
+        "/userRegister.gl",
+        {}
+      ],
+      "outflow": [],
+      "package": "net",
+      "variable": []
+    },
+    "15": {
+      "func": "/authorization.gl",
+      "id": "15",
+      "inflow": [
+        "8",
+        "18"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "13",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "child",
+      "variable": []
+    },
+    "16": {
+      "func": "get",
+      "id": "16",
+      "inflow": [
+        "8"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "",
+        "url"
+      ],
+      "outflow": [
+        {
+          "id": "17",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "17": {
+      "func": "indexOf",
+      "id": "17",
+      "inflow": [
+        "16"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/user"
+      ],
+      "outflow": [
+        {
+          "id": "18",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "18": {
+      "func": "eq",
+      "id": "18",
+      "inflow": [
+        "17"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        0
+      ],
+      "outflow": [
+        {
+          "id": "15",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "19",
+          "source": 1,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "19": {
+      "func": "set",
+      "id": "19",
+      "inflow": [
+        "8",
+        "18"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "19",
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "14",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "20",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "variable",
+      "variable": []
+    },
+    "20": {
+      "func": "httpRouter",
+      "id": "20",
+      "inflow": [
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/login",
+        "/userLogin.gl",
+        {}
+      ],
+      "outflow": [],
+      "package": "net",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "8",
+    "source": 0,
+    "target": 0
+  }
+}

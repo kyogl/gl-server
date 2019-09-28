@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "9": {
+      "func": "",
+      "id": "9",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "11",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "10": {
+      "func": "",
+      "id": "10",
+      "inflow": [
+        "11"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [],
+      "package": "end",
+      "variable": []
+    },
+    "11": {
+      "func": "get",
+      "id": "11",
+      "inflow": [
+        "9"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "body"
+      ],
+      "outflow": [
+        {
+          "id": "10",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "9",
+    "source": 0,
+    "target": 0
+  }
+}

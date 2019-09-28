@@ -1,0 +1,505 @@
+{
+  "nodes": {
+    "9": {
+      "func": "",
+      "id": "9",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "11",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "10": {
+      "func": "",
+      "id": "10",
+      "inflow": [
+        "31"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [],
+      "package": "end",
+      "variable": []
+    },
+    "11": {
+      "func": "get",
+      "id": "11",
+      "inflow": [
+        "9"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "body"
+      ],
+      "outflow": [
+        {
+          "id": "12",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "13",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "12": {
+      "func": "get",
+      "id": "12",
+      "inflow": [
+        "11"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "name"
+      ],
+      "outflow": [
+        {
+          "id": "14",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "19",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "13": {
+      "func": "get",
+      "id": "13",
+      "inflow": [
+        "11"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "pass"
+      ],
+      "outflow": [
+        {
+          "id": "16",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "29",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "14": {
+      "func": "isString",
+      "id": "14",
+      "inflow": [
+        "12"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "15",
+          "source": 1,
+          "target": -1
+        },
+        {
+          "id": "18",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "15": {
+      "func": "",
+      "id": "15",
+      "inflow": [
+        "14"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "用户名不能为空"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "16": {
+      "func": "isString",
+      "id": "16",
+      "inflow": [
+        "13"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "17",
+          "source": 1,
+          "target": -1
+        },
+        {
+          "id": "18",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "17": {
+      "func": "",
+      "id": "17",
+      "inflow": [
+        "16"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "密码不能为空"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "18": {
+      "func": "/request.gl",
+      "id": "18",
+      "inflow": [
+        "14",
+        "21",
+        "16"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "22",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "25",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "child",
+      "variable": []
+    },
+    "19": {
+      "func": "concat",
+      "id": "19",
+      "inflow": [
+        "12"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "user:",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "20",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "20": {
+      "func": "set",
+      "id": "20",
+      "inflow": [
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        {},
+        "key",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "21",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "21": {
+      "func": "set",
+      "id": "21",
+      "inflow": [
+        "20"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "action",
+        "get"
+      ],
+      "outflow": [
+        {
+          "id": "18",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "22": {
+      "func": "get",
+      "id": "22",
+      "inflow": [
+        "18"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "success"
+      ],
+      "outflow": [
+        {
+          "id": "23",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "23": {
+      "func": "isTrue",
+      "id": "23",
+      "inflow": [
+        "22"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "24",
+          "source": 1,
+          "target": -1
+        },
+        {
+          "id": "25",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "24": {
+      "func": "",
+      "id": "24",
+      "inflow": [
+        "23"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "请求服务器失败"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "25": {
+      "func": "get",
+      "id": "25",
+      "inflow": [
+        "23",
+        "18"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "data"
+      ],
+      "outflow": [
+        {
+          "id": "26",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "28",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "26": {
+      "func": "eq",
+      "id": "26",
+      "inflow": [
+        "25"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "27",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "28",
+          "source": 1,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "27": {
+      "func": "",
+      "id": "27",
+      "inflow": [
+        "26"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "用户名或密码错误"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "28": {
+      "func": "get",
+      "id": "28",
+      "inflow": [
+        "26",
+        "25"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "pass"
+      ],
+      "outflow": [
+        {
+          "id": "29",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "31",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "29": {
+      "func": "eq",
+      "id": "29",
+      "inflow": [
+        "28",
+        "13"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "30",
+          "source": 1,
+          "target": -1
+        },
+        {
+          "id": "31",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "condition",
+      "variable": []
+    },
+    "30": {
+      "func": "",
+      "id": "30",
+      "inflow": [
+        "29"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "用户名或密码错误"
+      ],
+      "outflow": [],
+      "package": "error",
+      "variable": []
+    },
+    "31": {
+      "func": "/createAuth.gl",
+      "id": "31",
+      "inflow": [
+        "28",
+        "29"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "10",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "child",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "9",
+    "source": 0,
+    "target": 0
+  }
+}

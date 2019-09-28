@@ -1,0 +1,375 @@
+{
+  "edges": [
+    {
+      "source": "8",
+      "sourceAnchor": 0,
+      "target": "15",
+      "targetAnchor": 0
+    },
+    {
+      "source": "15",
+      "sourceAnchor": 0,
+      "target": "13",
+      "targetAnchor": 0
+    },
+    {
+      "source": "8",
+      "sourceAnchor": 0,
+      "target": "16",
+      "targetAnchor": 0
+    },
+    {
+      "source": "16",
+      "sourceAnchor": 0,
+      "target": "17",
+      "targetAnchor": 0
+    },
+    {
+      "source": "17",
+      "sourceAnchor": 0,
+      "target": "18",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "18",
+      "sourceAnchor": 0,
+      "target": "15",
+      "targetAnchor": 0
+    },
+    {
+      "source": "8",
+      "sourceAnchor": 0,
+      "target": "19",
+      "targetAnchor": 1
+    },
+    {
+      "runOnly": true,
+      "source": "18",
+      "sourceAnchor": 1,
+      "target": "19",
+      "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "14",
+      "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "20",
+      "targetAnchor": 0
+    }
+  ],
+  "nodes": [
+    {
+      "data": [
+        ""
+      ],
+      "id": "8",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "start"
+      },
+      "x": 2676,
+      "y": 93
+    },
+    {
+      "data": [
+        null,
+        "/user",
+        "/user.gl",
+        "{}"
+      ],
+      "id": "13",
+      "name": "/user",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 2390,
+      "y": 575
+    },
+    {
+      "data": [
+        null,
+        "/reg",
+        "/userRegister.gl",
+        "{}"
+      ],
+      "id": "14",
+      "name": "/reg",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 2877,
+      "y": 621
+    },
+    {
+      "id": "15",
+      "op": {
+        "func": "/authorization.gl",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "child"
+      },
+      "x": 2386,
+      "y": 427
+    },
+    {
+      "data": [
+        "",
+        "url"
+      ],
+      "id": "16",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2679,
+      "y": 245
+    },
+    {
+      "data": [
+        null,
+        "/user"
+      ],
+      "id": "17",
+      "op": {
+        "desc": "获取b在a中的索引位置，输出一个整数",
+        "func": "indexOf",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2672,
+      "y": 320
+    },
+    {
+      "data": [
+        null,
+        "0"
+      ],
+      "id": "18",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2670,
+      "y": 400
+    },
+    {
+      "data": [
+        "\"19\"",
+        ""
+      ],
+      "id": "19",
+      "op": {
+        "desc": "为指定节点设置返回值，并输出该值",
+        "func": "set",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "variable"
+      },
+      "x": 2968,
+      "y": 483
+    },
+    {
+      "data": [
+        null,
+        "/login",
+        "/userLogin.gl",
+        "{}"
+      ],
+      "id": "20",
+      "name": "/login",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 3120,
+      "y": 620
+    }
+  ]
+}

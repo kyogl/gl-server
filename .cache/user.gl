@@ -1,0 +1,91 @@
+{
+  "edges": [
+    {
+      "source": "9",
+      "sourceAnchor": 0,
+      "target": "11",
+      "targetAnchor": 0
+    },
+    {
+      "source": "11",
+      "sourceAnchor": 0,
+      "target": "10",
+      "targetAnchor": 0
+    }
+  ],
+  "nodes": [
+    {
+      "id": "9",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "start"
+      },
+      "x": 2593,
+      "y": 92
+    },
+    {
+      "id": "10",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "end"
+      },
+      "x": 2586,
+      "y": 306
+    },
+    {
+      "data": [
+        null,
+        "body"
+      ],
+      "id": "11",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2583,
+      "y": 199
+    }
+  ]
+}

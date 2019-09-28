@@ -1,0 +1,205 @@
+{
+  "nodes": {
+    "11": {
+      "func": "",
+      "id": "11",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        {}
+      ],
+      "outflow": [
+        {
+          "id": "20",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "22",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "21",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "26",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "12": {
+      "func": "",
+      "id": "12",
+      "inflow": [
+        "23"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [],
+      "package": "end",
+      "variable": []
+    },
+    "20": {
+      "func": "post",
+      "id": "20",
+      "inflow": [
+        "11",
+        "24"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "http://127.0.0.1:8081",
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "23",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "net",
+      "variable": []
+    },
+    "21": {
+      "func": "set",
+      "id": "21",
+      "inflow": [
+        "22",
+        "11"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "",
+        "auth",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "24",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "22": {
+      "func": "/auth.gl",
+      "id": "22",
+      "inflow": [
+        "11"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "21",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "child",
+      "variable": []
+    },
+    "23": {
+      "func": "jsonDecode",
+      "id": "23",
+      "inflow": [
+        "20"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "12",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "encoding",
+      "variable": []
+    },
+    "24": {
+      "func": "set",
+      "id": "24",
+      "inflow": [
+        "21",
+        "25"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "value",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "20",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "25": {
+      "func": "jsonEncode",
+      "id": "25",
+      "inflow": [
+        "26"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "24",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "encoding",
+      "variable": []
+    },
+    "26": {
+      "func": "get",
+      "id": "26",
+      "inflow": [
+        "11"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "value"
+      ],
+      "outflow": [
+        {
+          "id": "25",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "11",
+    "source": 0,
+    "target": 0
+  }
+}

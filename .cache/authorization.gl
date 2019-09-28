@@ -1,0 +1,670 @@
+{
+  "edges": [
+    {
+      "source": "15",
+      "sourceAnchor": 0,
+      "target": "17",
+      "targetAnchor": 0
+    },
+    {
+      "source": "17",
+      "sourceAnchor": 0,
+      "target": "18",
+      "targetAnchor": 0
+    },
+    {
+      "source": "18",
+      "sourceAnchor": 0,
+      "target": "19",
+      "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "20",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "20",
+      "sourceAnchor": 0,
+      "target": "21",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "20",
+      "sourceAnchor": 1,
+      "target": "22",
+      "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "22",
+      "targetAnchor": 0
+    },
+    {
+      "source": "15",
+      "sourceAnchor": 0,
+      "target": "16",
+      "targetAnchor": 0
+    },
+    {
+      "source": "22",
+      "sourceAnchor": 0,
+      "target": "26",
+      "targetAnchor": 0
+    },
+    {
+      "source": "26",
+      "sourceAnchor": 0,
+      "target": "27",
+      "targetAnchor": 0
+    },
+    {
+      "source": "26",
+      "sourceAnchor": 0,
+      "target": "28",
+      "targetAnchor": 0
+    },
+    {
+      "source": "26",
+      "sourceAnchor": 0,
+      "target": "29",
+      "targetAnchor": 0
+    },
+    {
+      "source": "27",
+      "sourceAnchor": 0,
+      "target": "31",
+      "targetAnchor": 0
+    },
+    {
+      "source": "31",
+      "sourceAnchor": 0,
+      "target": "32",
+      "targetAnchor": 0
+    },
+    {
+      "source": "29",
+      "sourceAnchor": 0,
+      "target": "32",
+      "targetAnchor": 1
+    },
+    {
+      "source": "32",
+      "sourceAnchor": 0,
+      "target": "33",
+      "targetAnchor": 0
+    },
+    {
+      "source": "33",
+      "sourceAnchor": 0,
+      "target": "34",
+      "targetAnchor": 0
+    },
+    {
+      "source": "28",
+      "sourceAnchor": 0,
+      "target": "34",
+      "targetAnchor": 1
+    },
+    {
+      "runOnly": true,
+      "source": "34",
+      "sourceAnchor": 0,
+      "target": "16",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "34",
+      "sourceAnchor": 1,
+      "target": "35",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "27",
+      "sourceAnchor": 0,
+      "target": "36",
+      "targetAnchor": 0
+    },
+    {
+      "source": "36",
+      "sourceAnchor": 0,
+      "target": "31",
+      "targetAnchor": 1
+    }
+  ],
+  "nodes": [
+    {
+      "id": "15",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "start"
+      },
+      "x": 2678,
+      "y": 97
+    },
+    {
+      "id": "16",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "end"
+      },
+      "x": 2632,
+      "y": 1299
+    },
+    {
+      "data": [
+        null,
+        "header"
+      ],
+      "id": "17",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2579,
+      "y": 179
+    },
+    {
+      "data": [
+        null,
+        "Authorization"
+      ],
+      "id": "18",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2579,
+      "y": 269
+    },
+    {
+      "data": [
+        null,
+        "0"
+      ],
+      "id": "19",
+      "op": {
+        "desc": "获取数组指定索引的元素，并将其输出",
+        "func": "nth",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "array"
+          },
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "array"
+      },
+      "x": 2523,
+      "y": 333
+    },
+    {
+      "data": [
+        null,
+        "\"\""
+      ],
+      "id": "20",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2384,
+      "y": 433
+    },
+    {
+      "data": [
+        "凭证为空"
+      ],
+      "id": "21",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2303,
+      "y": 510
+    },
+    {
+      "data": [
+        null,
+        "\"Basic \"",
+        "\"\"",
+        "1"
+      ],
+      "id": "22",
+      "op": {
+        "desc": "替换字符串中所有b为c，替换d次，输出新的字符串",
+        "func": "replace",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2544,
+      "y": 575
+    },
+    {
+      "data": [
+        null,
+        ":"
+      ],
+      "id": "26",
+      "op": {
+        "desc": "根据b将a分割为一个数组，输出新的数组",
+        "func": "split",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "array"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2543,
+      "y": 672
+    },
+    {
+      "data": [
+        null,
+        "0"
+      ],
+      "id": "27",
+      "name": "name",
+      "op": {
+        "desc": "获取数组指定索引的元素，并将其输出",
+        "func": "nth",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "array"
+          },
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "array"
+      },
+      "x": 2336,
+      "y": 799
+    },
+    {
+      "data": [
+        null,
+        "1"
+      ],
+      "id": "28",
+      "name": "auth",
+      "op": {
+        "desc": "获取数组指定索引的元素，并将其输出",
+        "func": "nth",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "array"
+          },
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "array"
+      },
+      "x": 2808,
+      "y": 773
+    },
+    {
+      "data": [
+        null,
+        "2"
+      ],
+      "id": "29",
+      "name": "time",
+      "op": {
+        "desc": "获取数组指定索引的元素，并将其输出",
+        "func": "nth",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "array"
+          },
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "array"
+      },
+      "x": 2565,
+      "y": 818
+    },
+    {
+      "data": [
+        null,
+        ""
+      ],
+      "id": "31",
+      "op": {
+        "desc": "连接两个字符串，输出新的字符串",
+        "func": "concat",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2232,
+      "y": 952
+    },
+    {
+      "id": "32",
+      "op": {
+        "desc": "连接两个字符串，输出新的字符串",
+        "func": "concat",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2509,
+      "y": 1008
+    },
+    {
+      "id": "33",
+      "op": {
+        "desc": "输出字符串的sha1值",
+        "func": "sha1",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "crypto"
+      },
+      "x": 2509,
+      "y": 1104
+    },
+    {
+      "id": "34",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2766,
+      "y": 1177
+    },
+    {
+      "data": [
+        "凭证不合法"
+      ],
+      "id": "35",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2870,
+      "y": 1297
+    },
+    {
+      "id": "36",
+      "op": {
+        "func": "/auth.gl",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "child"
+      },
+      "x": 2400,
+      "y": 897
+    }
+  ]
+}
