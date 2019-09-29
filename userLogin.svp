@@ -189,7 +189,7 @@
       "variable": []
     },
     "18": {
-      "func": "/request.gl",
+      "func": "/request.svp",
       "id": "18",
       "inflow": [
         "14",
@@ -476,7 +476,7 @@
       "variable": []
     },
     "31": {
-      "func": "/createAuth.gl",
+      "func": "/createAuth.svp",
       "id": "31",
       "inflow": [
         "28",

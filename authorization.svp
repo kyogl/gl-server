@@ -375,7 +375,7 @@
       "variable": []
     },
     "36": {
-      "func": "/auth.gl",
+      "func": "/auth.svp",
       "id": "36",
       "inflow": [
         "27"

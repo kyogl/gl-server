@@ -420,7 +420,7 @@
     {
       "id": "18",
       "op": {
-        "func": "/request.gl",
+        "func": "/request.svp",
         "inputArgs": [
           {
             "desc": "",
@@ -804,7 +804,7 @@
     {
       "id": "31",
       "op": {
-        "func": "/createAuth.gl",
+        "func": "/createAuth.svp",
         "inputArgs": [
           {
             "desc": "",

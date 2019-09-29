@@ -390,7 +390,7 @@
     {
       "id": "79",
       "op": {
-        "func": "/auth.gl",
+        "func": "/auth.svp",
         "inputArgs": [
           {
             "desc": "",

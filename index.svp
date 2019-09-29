@@ -38,7 +38,7 @@
       "input": [
         null,
         "/user",
-        "/user.gl",
+        "/user.svp",
         {}
       ],
       "outflow": [],
@@ -55,7 +55,7 @@
       "input": [
         null,
         "/reg",
-        "/userRegister.gl",
+        "/userRegister.svp",
         {}
       ],
       "outflow": [],
@@ -63,7 +63,7 @@
       "variable": []
     },
     "15": {
-      "func": "/authorization.gl",
+      "func": "/authorization.svp",
       "id": "15",
       "inflow": [
         "8",
@@ -188,7 +188,7 @@
       "input": [
         null,
         "/login",
-        "/userLogin.gl",
+        "/userLogin.svp",
         {}
       ],
       "outflow": [],

@@ -94,7 +94,7 @@
       "data": [
         null,
         "/user",
-        "/user.gl",
+        "/user.svp",
         "{}"
       ],
       "id": "13",
@@ -136,7 +136,7 @@
       "data": [
         null,
         "/reg",
-        "/userRegister.gl",
+        "/userRegister.svp",
         "{}"
       ],
       "id": "14",
@@ -177,7 +177,7 @@
     {
       "id": "15",
       "op": {
-        "func": "/authorization.gl",
+        "func": "/authorization.svp",
         "inputArgs": [
           {
             "desc": "",
@@ -333,7 +333,7 @@
       "data": [
         null,
         "/login",
-        "/userLogin.gl",
+        "/userLogin.svp",
         "{}"
       ],
       "id": "20",

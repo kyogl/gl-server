@@ -243,7 +243,7 @@
       "variable": []
     },
     "79": {
-      "func": "/auth.gl",
+      "func": "/auth.svp",
       "id": "79",
       "inflow": [
         "65"

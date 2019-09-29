@@ -808,7 +808,7 @@
     {
       "id": "36",
       "op": {
-        "func": "/request.gl",
+        "func": "/request.svp",
         "inputArgs": [
           {
             "desc": "",
@@ -1181,7 +1181,7 @@
     {
       "id": "50",
       "op": {
-        "func": "/request.gl",
+        "func": "/request.svp",
         "inputArgs": [
           {
             "desc": "",
@@ -1285,7 +1285,7 @@
     {
       "id": "65",
       "op": {
-        "func": "/createAuth.gl",
+        "func": "/createAuth.svp",
         "inputArgs": [
           {
             "desc": "",
