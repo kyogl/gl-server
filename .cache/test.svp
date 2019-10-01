@@ -1,0 +1,99 @@
+{
+  "edges": [
+    {
+      "source": "12",
+      "sourceAnchor": 0,
+      "target": "28",
+      "targetAnchor": 0
+    },
+    {
+      "source": "28",
+      "sourceAnchor": 0,
+      "target": "13",
+      "targetAnchor": 0
+    }
+  ],
+  "nodes": [
+    {
+      "data": [
+        "{\"action\":\"set\"}"
+      ],
+      "id": "12",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "start"
+      },
+      "x": 2745,
+      "y": 86
+    },
+    {
+      "id": "13",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "end"
+      },
+      "x": 2729,
+      "y": 380
+    },
+    {
+      "data": [
+        null,
+        "key",
+        "vag"
+      ],
+      "id": "28",
+      "op": {
+        "desc": "为对象的指定键设置值，输出新的对象",
+        "func": "set",
+        "inputArgs": [
+          {
+            "desc": "任意对象",
+            "type": "object"
+          },
+          {
+            "desc": "键值",
+            "type": "string"
+          },
+          {
+            "desc": "任意数据",
+            "type": ""
+          }
+        ],
+        "inputCount": 3,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "包含新键值的对象",
+            "type": "object"
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2713,
+      "y": 208
+    }
+  ]
+}

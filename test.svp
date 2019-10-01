@@ -1,0 +1,65 @@
+{
+  "nodes": {
+    "12": {
+      "func": "",
+      "id": "12",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        {
+          "action": "set"
+        }
+      ],
+      "outflow": [
+        {
+          "id": "28",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "13": {
+      "func": "",
+      "id": "13",
+      "inflow": [
+        "28"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [],
+      "package": "end",
+      "variable": []
+    },
+    "28": {
+      "func": "set",
+      "id": "28",
+      "inflow": [
+        "12"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "key",
+        "vag"
+      ],
+      "outflow": [
+        {
+          "id": "13",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "12",
+    "source": 0,
+    "target": 0
+  }
+}

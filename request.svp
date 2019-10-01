@@ -6,14 +6,11 @@
       "inflow": [],
       "inflowRunTimes": 0,
       "input": [
-        {}
+        {
+          "action": "get"
+        }
       ],
       "outflow": [
-        {
-          "id": "20",
-          "source": 0,
-          "target": -1
-        },
         {
           "id": "22",
           "source": 0,
@@ -37,7 +34,7 @@
       "func": "",
       "id": "12",
       "inflow": [
-        "23"
+        "27"
       ],
       "inflowRunTimes": 0,
       "input": [
@@ -45,28 +42,6 @@
       ],
       "outflow": [],
       "package": "end",
-      "variable": []
-    },
-    "20": {
-      "func": "post",
-      "id": "20",
-      "inflow": [
-        "11",
-        "24"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        "http://127.0.0.1:8081",
-        ""
-      ],
-      "outflow": [
-        {
-          "id": "23",
-          "source": 0,
-          "target": 0
-        }
-      ],
-      "package": "net",
       "variable": []
     },
     "21": {
@@ -112,26 +87,6 @@
       "package": "child",
       "variable": []
     },
-    "23": {
-      "func": "jsonDecode",
-      "id": "23",
-      "inflow": [
-        "20"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        null
-      ],
-      "outflow": [
-        {
-          "id": "12",
-          "source": 0,
-          "target": 0
-        }
-      ],
-      "package": "encoding",
-      "variable": []
-    },
     "24": {
       "func": "set",
       "id": "24",
@@ -147,9 +102,14 @@
       ],
       "outflow": [
         {
-          "id": "20",
+          "id": "28",
           "source": 0,
-          "target": 1
+          "target": 0
+        },
+        {
+          "id": "27",
+          "source": 0,
+          "target": 2
         }
       ],
       "package": "object",
@@ -191,6 +151,51 @@
           "id": "25",
           "source": 0,
           "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "27": {
+      "func": "grpcClient",
+      "id": "27",
+      "inflow": [
+        "28",
+        "24"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "localhost:8081",
+        null,
+        null,
+        500
+      ],
+      "outflow": [
+        {
+          "id": "12",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "net",
+      "variable": []
+    },
+    "28": {
+      "func": "get",
+      "id": "28",
+      "inflow": [
+        "24"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "action"
+      ],
+      "outflow": [
+        {
+          "id": "27",
+          "source": 0,
+          "target": 1
         }
       ],
       "package": "object",

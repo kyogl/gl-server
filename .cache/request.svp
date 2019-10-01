@@ -4,13 +4,6 @@
       "runOnly": true,
       "source": "11",
       "sourceAnchor": 0,
-      "target": "20",
-      "targetAnchor": 0
-    },
-    {
-      "runOnly": true,
-      "source": "11",
-      "sourceAnchor": 0,
       "target": "22",
       "targetAnchor": 0
     },
@@ -19,18 +12,6 @@
       "sourceAnchor": 0,
       "target": "21",
       "targetAnchor": 2
-    },
-    {
-      "source": "20",
-      "sourceAnchor": 0,
-      "target": "23",
-      "targetAnchor": 0
-    },
-    {
-      "source": "23",
-      "sourceAnchor": 0,
-      "target": "12",
-      "targetAnchor": 0
     },
     {
       "source": "11",
@@ -43,12 +24,6 @@
       "sourceAnchor": 0,
       "target": "24",
       "targetAnchor": 0
-    },
-    {
-      "source": "24",
-      "sourceAnchor": 0,
-      "target": "20",
-      "targetAnchor": 1
     },
     {
       "source": "11",
@@ -67,12 +42,36 @@
       "sourceAnchor": 0,
       "target": "24",
       "targetAnchor": 2
+    },
+    {
+      "source": "27",
+      "sourceAnchor": 0,
+      "target": "12",
+      "targetAnchor": 0
+    },
+    {
+      "source": "24",
+      "sourceAnchor": 0,
+      "target": "28",
+      "targetAnchor": 0
+    },
+    {
+      "source": "28",
+      "sourceAnchor": 0,
+      "target": "27",
+      "targetAnchor": 1
+    },
+    {
+      "source": "24",
+      "sourceAnchor": 0,
+      "target": "27",
+      "targetAnchor": 2
     }
   ],
   "nodes": [
     {
       "data": [
-        "{}"
+        "{\"action\":\"get\"}"
       ],
       "id": "11",
       "op": {
@@ -93,8 +92,8 @@
         ],
         "package": "start"
       },
-      "x": 2601,
-      "y": 70
+      "x": 2560,
+      "y": 60
     },
     {
       "id": "12",
@@ -111,41 +110,8 @@
         "outputType": [],
         "package": "end"
       },
-      "x": 2661,
-      "y": 474
-    },
-    {
-      "data": [
-        "http://127.0.0.1:8081",
-        ""
-      ],
-      "id": "20",
-      "name": "121.43.169.84",
-      "op": {
-        "desc": "向指定url发送post请求，输出字符串",
-        "func": "post",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": "string"
-          },
-          {
-            "desc": "",
-            "type": "object"
-          }
-        ],
-        "inputCount": 2,
-        "outputCount": 1,
-        "outputType": [
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "package": "net"
-      },
-      "x": 2457,
-      "y": 328
+      "x": 2604,
+      "y": 624
     },
     {
       "data": [
@@ -181,8 +147,8 @@
         ],
         "package": "object"
       },
-      "x": 2647,
-      "y": 260
+      "x": 2599,
+      "y": 259
     },
     {
       "id": "22",
@@ -204,32 +170,8 @@
         ],
         "package": "child"
       },
-      "x": 2745,
-      "y": 193
-    },
-    {
-      "id": "23",
-      "op": {
-        "desc": "将字符串转换为json数据",
-        "func": "jsonDecode",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "inputCount": 1,
-        "outputCount": 1,
-        "outputType": [
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "package": "encoding"
-      },
-      "x": 2687,
-      "y": 399
+      "x": 2738,
+      "y": 182
     },
     {
       "data": [
@@ -265,8 +207,8 @@
         ],
         "package": "object"
       },
-      "x": 2837,
-      "y": 327
+      "x": 2787,
+      "y": 328
     },
     {
       "id": "25",
@@ -323,6 +265,81 @@
       },
       "x": 2926,
       "y": 143
+    },
+    {
+      "data": [
+        "localhost:8081",
+        null,
+        null,
+        "500"
+      ],
+      "id": "27",
+      "name": "localhost:8081",
+      "op": {
+        "desc": "向指定grpc发送请求，输出一个对象",
+        "func": "grpcClient",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": "number"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "object"
+          }
+        ],
+        "package": "net"
+      },
+      "x": 2613,
+      "y": 503
+    },
+    {
+      "data": [
+        null,
+        "action"
+      ],
+      "id": "28",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "object"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2542,
+      "y": 394
     }
   ]
 }
