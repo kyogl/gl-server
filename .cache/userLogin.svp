@@ -147,12 +147,6 @@
       "targetAnchor": 0
     },
     {
-      "source": "28",
-      "sourceAnchor": 0,
-      "target": "31",
-      "targetAnchor": 0
-    },
-    {
       "runOnly": true,
       "source": "29",
       "sourceAnchor": 0,
@@ -177,10 +171,25 @@
       "sourceAnchor": 0,
       "target": "25",
       "targetAnchor": 0
+    },
+    {
+      "source": "25",
+      "sourceAnchor": 0,
+      "target": "32",
+      "targetAnchor": 0
+    },
+    {
+      "source": "32",
+      "sourceAnchor": 0,
+      "target": "31",
+      "targetAnchor": 0
     }
   ],
   "nodes": [
     {
+      "data": [
+        "{}"
+      ],
       "id": "9",
       "op": {
         "func": "",
@@ -255,7 +264,7 @@
     },
     {
       "data": [
-        null,
+        "{\"name\":\"kyo8\"}",
         "name"
       ],
       "id": "12",
@@ -288,7 +297,7 @@
     },
     {
       "data": [
-        null,
+        "{\"pass\":\"test\"}",
         "pass"
       ],
       "id": "13",
@@ -745,8 +754,8 @@
         ],
         "package": "object"
       },
-      "x": 2646,
-      "y": 1042
+      "x": 2638,
+      "y": 1059
     },
     {
       "id": "29",
@@ -823,6 +832,38 @@
       },
       "x": 2579,
       "y": 1306
+    },
+    {
+      "data": [
+        null,
+        "name"
+      ],
+      "id": "32",
+      "op": {
+        "desc": "输出对象指定键的值",
+        "func": "get",
+        "inputArgs": [
+          {
+            "desc": "任意对象",
+            "type": "object"
+          },
+          {
+            "desc": "键值",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "key对应的元素value",
+            "type": ""
+          }
+        ],
+        "package": "object"
+      },
+      "x": 2490,
+      "y": 1160
     }
   ]
 }

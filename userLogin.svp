@@ -6,7 +6,7 @@
       "inflow": [],
       "inflowRunTimes": 0,
       "input": [
-        null
+        {}
       ],
       "outflow": [
         {
@@ -66,7 +66,9 @@
       ],
       "inflowRunTimes": 0,
       "input": [
-        null,
+        {
+          "name": "kyo8"
+        },
         "name"
       ],
       "outflow": [
@@ -92,7 +94,9 @@
       ],
       "inflowRunTimes": 0,
       "input": [
-        null,
+        {
+          "pass": "test"
+        },
         "pass"
       ],
       "outflow": [
@@ -362,6 +366,11 @@
           "id": "28",
           "source": 0,
           "target": 0
+        },
+        {
+          "id": "32",
+          "source": 0,
+          "target": 0
         }
       ],
       "package": "object",
@@ -424,11 +433,6 @@
           "id": "29",
           "source": 0,
           "target": 0
-        },
-        {
-          "id": "31",
-          "source": 0,
-          "target": 0
         }
       ],
       "package": "object",
@@ -479,8 +483,8 @@
       "func": "/createAuth.svp",
       "id": "31",
       "inflow": [
-        "28",
-        "29"
+        "29",
+        "32"
       ],
       "inflowRunTimes": 0,
       "input": [
@@ -494,6 +498,27 @@
         }
       ],
       "package": "child",
+      "variable": []
+    },
+    "32": {
+      "func": "get",
+      "id": "32",
+      "inflow": [
+        "25"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "name"
+      ],
+      "outflow": [
+        {
+          "id": "31",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
       "variable": []
     }
   },
