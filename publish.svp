@@ -1,0 +1,882 @@
+{
+  "nodes": {
+    "31": {
+      "func": "",
+      "id": "31",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "36",
+          "source": 0,
+          "target": -1
+        },
+        {
+          "id": "42",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "start",
+      "variable": []
+    },
+    "32": {
+      "func": "",
+      "id": "32",
+      "inflow": [
+        "70"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [],
+      "package": "end",
+      "variable": []
+    },
+    "33": {
+      "func": "get",
+      "id": "33",
+      "inflow": [
+        "42"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "name"
+      ],
+      "outflow": [
+        {
+          "id": "38",
+          "source": 0,
+          "target": 1
+        },
+        {
+          "id": "40",
+          "source": 0,
+          "target": 2
+        },
+        {
+          "id": "71",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "34": {
+      "func": "new",
+      "id": "34",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        {}
+      ],
+      "outflow": [],
+      "package": "variable",
+      "variable": []
+    },
+    "36": {
+      "func": "set",
+      "id": "36",
+      "inflow": [
+        "31"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        {},
+        "set",
+        {}
+      ],
+      "outflow": [],
+      "package": "object",
+      "variable": []
+    },
+    "37": {
+      "func": "set",
+      "id": "37",
+      "inflow": [
+        "50",
+        "63",
+        "73"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        {},
+        "",
+        {}
+      ],
+      "outflow": [
+        {
+          "id": "54",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "38": {
+      "func": "concat",
+      "id": "38",
+      "inflow": [
+        "33"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "subgraph:",
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "47",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "40": {
+      "func": "set",
+      "id": "40",
+      "inflow": [
+        "33"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        {},
+        "name",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "41",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "41": {
+      "func": "set",
+      "id": "41",
+      "inflow": [
+        "40",
+        "43"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "description",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "48",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "42": {
+      "func": "get",
+      "id": "42",
+      "inflow": [
+        "31"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "body"
+      ],
+      "outflow": [
+        {
+          "id": "33",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "43",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "44",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "51",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "52",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "53",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "43": {
+      "func": "get",
+      "id": "43",
+      "inflow": [
+        "42"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "description"
+      ],
+      "outflow": [
+        {
+          "id": "41",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "44": {
+      "func": "get",
+      "id": "44",
+      "inflow": [
+        "42"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "version"
+      ],
+      "outflow": [
+        {
+          "id": "46",
+          "source": 0,
+          "target": 1
+        },
+        {
+          "id": "48",
+          "source": 0,
+          "target": 2
+        },
+        {
+          "id": "73",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "46": {
+      "func": "concat",
+      "id": "46",
+      "inflow": [
+        "47",
+        "44"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "63",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "47": {
+      "func": "concat",
+      "id": "47",
+      "inflow": [
+        "38"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ":"
+      ],
+      "outflow": [
+        {
+          "id": "46",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "48": {
+      "func": "set",
+      "id": "48",
+      "inflow": [
+        "44",
+        "41"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "version",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "49",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "49": {
+      "func": "set",
+      "id": "49",
+      "inflow": [
+        "51",
+        "48"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "input",
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "50",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "50": {
+      "func": "set",
+      "id": "50",
+      "inflow": [
+        "52",
+        "49"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "output",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "37",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "51": {
+      "func": "get",
+      "id": "51",
+      "inflow": [
+        "42"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "input"
+      ],
+      "outflow": [
+        {
+          "id": "49",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "52": {
+      "func": "get",
+      "id": "52",
+      "inflow": [
+        "42"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "output"
+      ],
+      "outflow": [
+        {
+          "id": "50",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "53": {
+      "func": "get",
+      "id": "53",
+      "inflow": [
+        "42",
+        "54"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "files"
+      ],
+      "outflow": [
+        {
+          "id": "56",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "54": {
+      "func": "set",
+      "id": "54",
+      "inflow": [
+        "37"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "34",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "53",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "variable",
+      "variable": []
+    },
+    "56": {
+      "func": "forEach",
+      "id": "56",
+      "inflow": [
+        "53"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "57",
+          "source": 1,
+          "target": 0
+        },
+        {
+          "id": "60",
+          "source": 1,
+          "target": -1
+        },
+        {
+          "id": "65",
+          "source": 1,
+          "target": -1
+        },
+        {
+          "id": "69",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "loop",
+      "variable": []
+    },
+    "57": {
+      "func": "get",
+      "id": "57",
+      "inflow": [
+        "56"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "value"
+      ],
+      "outflow": [
+        {
+          "id": "58",
+          "source": 0,
+          "target": 0
+        },
+        {
+          "id": "59",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "58": {
+      "func": "get",
+      "id": "58",
+      "inflow": [
+        "57"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "path"
+      ],
+      "outflow": [
+        {
+          "id": "66",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "59": {
+      "func": "get",
+      "id": "59",
+      "inflow": [
+        "57"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "data"
+      ],
+      "outflow": [
+        {
+          "id": "61",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "60": {
+      "func": "get",
+      "id": "60",
+      "inflow": [
+        "56"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "34"
+      ],
+      "outflow": [
+        {
+          "id": "61",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "variable",
+      "variable": []
+    },
+    "61": {
+      "func": "set",
+      "id": "61",
+      "inflow": [
+        "60",
+        "59",
+        "66"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "67",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "62": {
+      "func": "new",
+      "id": "62",
+      "inflow": [],
+      "inflowRunTimes": 0,
+      "input": [
+        ""
+      ],
+      "outflow": [],
+      "package": "variable",
+      "variable": []
+    },
+    "63": {
+      "func": "set",
+      "id": "63",
+      "inflow": [
+        "46"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "62",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "37",
+          "source": 0,
+          "target": -1
+        }
+      ],
+      "package": "variable",
+      "variable": []
+    },
+    "64": {
+      "func": "concat",
+      "id": "64",
+      "inflow": [
+        "65"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ":"
+      ],
+      "outflow": [
+        {
+          "id": "66",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "65": {
+      "func": "get",
+      "id": "65",
+      "inflow": [
+        "56"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "62"
+      ],
+      "outflow": [
+        {
+          "id": "64",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "variable",
+      "variable": []
+    },
+    "66": {
+      "func": "concat",
+      "id": "66",
+      "inflow": [
+        "64",
+        "58"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "61",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "67": {
+      "func": "set",
+      "id": "67",
+      "inflow": [
+        "61"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "54",
+        null
+      ],
+      "outflow": [],
+      "package": "variable",
+      "variable": []
+    },
+    "68": {
+      "func": "set",
+      "id": "68",
+      "inflow": [
+        "69"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        {
+          "action": "batch"
+        },
+        "value",
+        ""
+      ],
+      "outflow": [
+        {
+          "id": "70",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "object",
+      "variable": []
+    },
+    "69": {
+      "func": "set",
+      "id": "69",
+      "inflow": [
+        "56"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        {},
+        "set",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "68",
+          "source": 0,
+          "target": 2
+        }
+      ],
+      "package": "object",
+      "variable": [
+        "",
+        "",
+        "34"
+      ]
+    },
+    "70": {
+      "func": "/request.svp",
+      "id": "70",
+      "inflow": [
+        "68"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null
+      ],
+      "outflow": [
+        {
+          "id": "32",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "import",
+      "variable": []
+    },
+    "71": {
+      "func": "concat",
+      "id": "71",
+      "inflow": [
+        "33"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        "subgraphmeta:",
+        null
+      ],
+      "outflow": [
+        {
+          "id": "72",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "72": {
+      "func": "concat",
+      "id": "72",
+      "inflow": [
+        "71"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        ":"
+      ],
+      "outflow": [
+        {
+          "id": "73",
+          "source": 0,
+          "target": 0
+        }
+      ],
+      "package": "string",
+      "variable": []
+    },
+    "73": {
+      "func": "concat",
+      "id": "73",
+      "inflow": [
+        "72",
+        "44"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        null
+      ],
+      "outflow": [
+        {
+          "id": "37",
+          "source": 0,
+          "target": 1
+        }
+      ],
+      "package": "string",
+      "variable": []
+    }
+  },
+  "start": {
+    "id": "31",
+    "source": 0,
+    "target": 0
+  }
+}

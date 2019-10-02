@@ -152,6 +152,11 @@
           "id": "20",
           "source": 0,
           "target": 0
+        },
+        {
+          "id": "23",
+          "source": 0,
+          "target": 0
         }
       ],
       "package": "variable",
@@ -190,9 +195,48 @@
           "id": "13",
           "source": 0,
           "target": 0
+        },
+        {
+          "id": "22",
+          "source": 0,
+          "target": 0
         }
       ],
       "package": "import",
+      "variable": []
+    },
+    "22": {
+      "func": "httpRouter",
+      "id": "22",
+      "inflow": [
+        "21"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/user/publish",
+        "/publish.svp",
+        {}
+      ],
+      "outflow": [],
+      "package": "net",
+      "variable": []
+    },
+    "23": {
+      "func": "httpRouter",
+      "id": "23",
+      "inflow": [
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/subgraph/list",
+        "/subgraphList.svp",
+        {}
+      ],
+      "outflow": [],
+      "package": "net",
       "variable": []
     }
   },

@@ -61,6 +61,18 @@
       "sourceAnchor": 0,
       "target": "21",
       "targetAnchor": 0
+    },
+    {
+      "source": "21",
+      "sourceAnchor": 0,
+      "target": "22",
+      "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "23",
+      "targetAnchor": 0
     }
   ],
   "nodes": [
@@ -129,8 +141,8 @@
         ],
         "package": "net"
       },
-      "x": 2390,
-      "y": 575
+      "x": 2331,
+      "y": 604
     },
     {
       "data": [
@@ -368,8 +380,92 @@
         ],
         "package": "import"
       },
-      "x": 2440,
-      "y": 456
+      "x": 2407,
+      "y": 439
+    },
+    {
+      "data": [
+        null,
+        "/user/publish",
+        "/publish.svp",
+        "{}"
+      ],
+      "id": "22",
+      "name": "/user/publish",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "router入参",
+            "type": ""
+          },
+          {
+            "desc": "路由地址",
+            "type": "string"
+          },
+          {
+            "desc": "调用图路径",
+            "type": "string"
+          },
+          {
+            "desc": "高级设置",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "暂无",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 2552,
+      "y": 602
+    },
+    {
+      "data": [
+        null,
+        "/subgraph/list",
+        "/subgraphList.svp",
+        "{}"
+      ],
+      "id": "23",
+      "name": "/subgraph/list",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "router入参",
+            "type": ""
+          },
+          {
+            "desc": "路由地址",
+            "type": "string"
+          },
+          {
+            "desc": "调用图路径",
+            "type": "string"
+          },
+          {
+            "desc": "高级设置",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "暂无",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 3344,
+      "y": 624
     }
   ]
 }
