@@ -100,9 +100,9 @@
       "func": "set",
       "id": "37",
       "inflow": [
-        "50",
         "63",
-        "73"
+        "73",
+        "48"
       ],
       "inflowRunTimes": 0,
       "input": [
@@ -210,16 +210,6 @@
         },
         {
           "id": "44",
-          "source": 0,
-          "target": 0
-        },
-        {
-          "id": "51",
-          "source": 0,
-          "target": 0
-        },
-        {
-          "id": "52",
           "source": 0,
           "target": 0
         },
@@ -342,95 +332,7 @@
       ],
       "outflow": [
         {
-          "id": "49",
-          "source": 0,
-          "target": 0
-        }
-      ],
-      "package": "object",
-      "variable": []
-    },
-    "49": {
-      "func": "set",
-      "id": "49",
-      "inflow": [
-        "51",
-        "48"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        null,
-        "input",
-        ""
-      ],
-      "outflow": [
-        {
-          "id": "50",
-          "source": 0,
-          "target": 0
-        }
-      ],
-      "package": "object",
-      "variable": []
-    },
-    "50": {
-      "func": "set",
-      "id": "50",
-      "inflow": [
-        "52",
-        "49"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        null,
-        "output",
-        null
-      ],
-      "outflow": [
-        {
           "id": "37",
-          "source": 0,
-          "target": 2
-        }
-      ],
-      "package": "object",
-      "variable": []
-    },
-    "51": {
-      "func": "get",
-      "id": "51",
-      "inflow": [
-        "42"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        null,
-        "input"
-      ],
-      "outflow": [
-        {
-          "id": "49",
-          "source": 0,
-          "target": 2
-        }
-      ],
-      "package": "object",
-      "variable": []
-    },
-    "52": {
-      "func": "get",
-      "id": "52",
-      "inflow": [
-        "42"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        null,
-        "output"
-      ],
-      "outflow": [
-        {
-          "id": "50",
           "source": 0,
           "target": 2
         }

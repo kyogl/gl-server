@@ -157,6 +157,11 @@
           "id": "23",
           "source": 0,
           "target": 0
+        },
+        {
+          "id": "25",
+          "source": 0,
+          "target": 0
         }
       ],
       "package": "variable",
@@ -233,6 +238,23 @@
         null,
         "/subgraph/list",
         "/subgraphList.svp",
+        {}
+      ],
+      "outflow": [],
+      "package": "net",
+      "variable": []
+    },
+    "25": {
+      "func": "httpRouter",
+      "id": "25",
+      "inflow": [
+        "19"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/subgraph/install",
+        "/subgraphInstall.svp",
         {}
       ],
       "outflow": [],

@@ -73,6 +73,12 @@
       "sourceAnchor": 0,
       "target": "23",
       "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "25",
+      "targetAnchor": 0
     }
   ],
   "nodes": [
@@ -141,8 +147,8 @@
         ],
         "package": "net"
       },
-      "x": 2331,
-      "y": 604
+      "x": 2380,
+      "y": 602
     },
     {
       "data": [
@@ -422,8 +428,8 @@
         ],
         "package": "net"
       },
-      "x": 2552,
-      "y": 602
+      "x": 2381,
+      "y": 705
     },
     {
       "data": [
@@ -466,6 +472,48 @@
       },
       "x": 3344,
       "y": 624
+    },
+    {
+      "data": [
+        null,
+        "/subgraph/install",
+        "/subgraphInstall.svp",
+        "{}"
+      ],
+      "id": "25",
+      "name": "/subgraph/install",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "router入参",
+            "type": ""
+          },
+          {
+            "desc": "路由地址",
+            "type": "string"
+          },
+          {
+            "desc": "调用图路径",
+            "type": "string"
+          },
+          {
+            "desc": "高级设置",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "暂无",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 3352,
+      "y": 736
     }
   ]
 }
