@@ -1,6 +1,25 @@
 {
   "edges": [
     {
+      "source": "33",
+      "sourceAnchor": 0,
+      "target": "34",
+      "targetAnchor": 0
+    },
+    {
+      "runOnly": true,
+      "source": "34",
+      "sourceAnchor": 1,
+      "target": "35",
+      "targetAnchor": 0
+    },
+    {
+      "source": "37",
+      "sourceAnchor": 0,
+      "target": "31",
+      "targetAnchor": 1
+    },
+    {
       "source": "15",
       "sourceAnchor": 0,
       "target": "17",
@@ -99,12 +118,6 @@
       "targetAnchor": 0
     },
     {
-      "source": "33",
-      "sourceAnchor": 0,
-      "target": "34",
-      "targetAnchor": 0
-    },
-    {
       "source": "28",
       "sourceAnchor": 0,
       "target": "34",
@@ -119,26 +132,149 @@
     },
     {
       "runOnly": true,
-      "source": "34",
-      "sourceAnchor": 1,
-      "target": "35",
-      "targetAnchor": 0
-    },
-    {
-      "runOnly": true,
       "source": "27",
       "sourceAnchor": 0,
       "target": "37",
       "targetAnchor": 0
-    },
-    {
-      "source": "37",
-      "sourceAnchor": 0,
-      "target": "31",
-      "targetAnchor": 1
     }
   ],
   "nodes": [
+    {
+      "data": [
+        null,
+        ""
+      ],
+      "id": "31",
+      "op": {
+        "desc": "连接两个字符串，输出新的字符串",
+        "func": "concat",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          },
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "string"
+      },
+      "x": 2232,
+      "y": 952
+    },
+    {
+      "id": "33",
+      "op": {
+        "desc": "输出字符串的sha1值",
+        "func": "sha1",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "package": "crypto"
+      },
+      "x": 2509,
+      "y": 1104
+    },
+    {
+      "id": "34",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2766,
+      "y": 1177
+    },
+    {
+      "data": [
+        "凭证不合法"
+      ],
+      "id": "35",
+      "op": {
+        "func": "",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": "string"
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 0,
+        "outputType": [],
+        "package": "error"
+      },
+      "x": 2870,
+      "y": 1297
+    },
+    {
+      "data": [
+        ""
+      ],
+      "id": "37",
+      "name": "",
+      "op": {
+        "func": "/auth.svp",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 1,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "import"
+      },
+      "x": 2388,
+      "y": 899
+    },
     {
       "id": "15",
       "op": {
@@ -336,8 +472,8 @@
     {
       "data": [
         null,
-        "\"Basic \"",
-        "\"\"",
+        "Basic ",
+        "",
         "1"
       ],
       "id": "22",
@@ -507,38 +643,6 @@
       "y": 818
     },
     {
-      "data": [
-        null,
-        ""
-      ],
-      "id": "31",
-      "op": {
-        "desc": "连接两个字符串，输出新的字符串",
-        "func": "concat",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": "string"
-          },
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "inputCount": 2,
-        "outputCount": 1,
-        "outputType": [
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "package": "string"
-      },
-      "x": 2232,
-      "y": 952
-    },
-    {
       "id": "32",
       "op": {
         "desc": "连接两个字符串，输出新的字符串",
@@ -565,110 +669,6 @@
       },
       "x": 2509,
       "y": 1008
-    },
-    {
-      "id": "33",
-      "op": {
-        "desc": "输出字符串的sha1值",
-        "func": "sha1",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "inputCount": 1,
-        "outputCount": 1,
-        "outputType": [
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "package": "crypto"
-      },
-      "x": 2509,
-      "y": 1104
-    },
-    {
-      "id": "34",
-      "op": {
-        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
-        "func": "eq",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": ""
-          },
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "inputCount": 2,
-        "outputCount": 2,
-        "outputType": [
-          {
-            "desc": "",
-            "type": ""
-          },
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "package": "condition"
-      },
-      "x": 2766,
-      "y": 1177
-    },
-    {
-      "data": [
-        "凭证不合法"
-      ],
-      "id": "35",
-      "op": {
-        "func": "",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": "string"
-          }
-        ],
-        "inputCount": 1,
-        "outputCount": 0,
-        "outputType": [],
-        "package": "error"
-      },
-      "x": 2870,
-      "y": 1297
-    },
-    {
-      "data": [
-        ""
-      ],
-      "id": "37",
-      "name": "",
-      "op": {
-        "func": "/auth.svp",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "inputCount": 1,
-        "outputCount": 1,
-        "outputType": [
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "package": "import"
-      },
-      "x": 2388,
-      "y": 899
     }
   ]
 }

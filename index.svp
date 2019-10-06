@@ -23,6 +23,11 @@
           "id": "21",
           "source": 0,
           "target": 0
+        },
+        {
+          "id": "26",
+          "source": 0,
+          "target": 0
         }
       ],
       "package": "start",
@@ -144,12 +149,12 @@
       ],
       "outflow": [
         {
-          "id": "14",
+          "id": "20",
           "source": 0,
           "target": 0
         },
         {
-          "id": "20",
+          "id": "14",
           "source": 0,
           "target": 0
         },
@@ -238,7 +243,17 @@
         null,
         "/subgraph/list",
         "/subgraphList.svp",
-        {}
+        {
+          "cookies": [
+            {
+              "name": "username",
+              "value": "kyo"
+            }
+          ],
+          "header": {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Custom-Header, Upgrade-Insecure-Requests"
+          }
+        }
       ],
       "outflow": [],
       "package": "net",
@@ -256,6 +271,25 @@
         "/subgraph/install",
         "/subgraphInstall.svp",
         {}
+      ],
+      "outflow": [],
+      "package": "net",
+      "variable": []
+    },
+    "26": {
+      "func": "httpRouter",
+      "id": "26",
+      "inflow": [
+        "8"
+      ],
+      "inflowRunTimes": 0,
+      "input": [
+        null,
+        "/html",
+        "/test.svp",
+        {
+          "html": "./html/index.html"
+        }
       ],
       "outflow": [],
       "package": "net",

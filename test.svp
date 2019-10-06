@@ -24,7 +24,7 @@
       "func": "",
       "id": "13",
       "inflow": [
-        "29"
+        "28"
       ],
       "inflowRunTimes": 0,
       "input": [
@@ -48,32 +48,12 @@
       ],
       "outflow": [
         {
-          "id": "29",
-          "source": 0,
-          "target": 0
-        }
-      ],
-      "package": "object",
-      "variable": []
-    },
-    "29": {
-      "func": "/request.svp",
-      "id": "29",
-      "inflow": [
-        "28"
-      ],
-      "inflowRunTimes": 0,
-      "input": [
-        null
-      ],
-      "outflow": [
-        {
           "id": "13",
           "source": 0,
           "target": 0
         }
       ],
-      "package": "import",
+      "package": "object",
       "variable": []
     }
   },

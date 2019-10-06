@@ -273,8 +273,8 @@
       "func": "concat",
       "id": "31",
       "inflow": [
-        "27",
-        "37"
+        "37",
+        "27"
       ],
       "inflowRunTimes": 0,
       "input": [
@@ -347,13 +347,13 @@
       ],
       "outflow": [
         {
-          "id": "16",
-          "source": 0,
+          "id": "35",
+          "source": 1,
           "target": -1
         },
         {
-          "id": "35",
-          "source": 1,
+          "id": "16",
+          "source": 0,
           "target": -1
         }
       ],

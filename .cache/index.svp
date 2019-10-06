@@ -1,15 +1,21 @@
 {
   "edges": [
     {
-      "source": "8",
-      "sourceAnchor": 0,
-      "target": "16",
-      "targetAnchor": 0
-    },
-    {
       "source": "16",
       "sourceAnchor": 0,
       "target": "17",
+      "targetAnchor": 0
+    },
+    {
+      "source": "19",
+      "sourceAnchor": 0,
+      "target": "20",
+      "targetAnchor": 0
+    },
+    {
+      "source": "8",
+      "sourceAnchor": 0,
+      "target": "16",
       "targetAnchor": 0
     },
     {
@@ -35,12 +41,6 @@
       "source": "19",
       "sourceAnchor": 0,
       "target": "14",
-      "targetAnchor": 0
-    },
-    {
-      "source": "19",
-      "sourceAnchor": 0,
-      "target": "20",
       "targetAnchor": 0
     },
     {
@@ -79,16 +79,19 @@
       "sourceAnchor": 0,
       "target": "25",
       "targetAnchor": 0
+    },
+    {
+      "source": "8",
+      "sourceAnchor": 0,
+      "target": "26",
+      "targetAnchor": 0
     }
   ],
   "nodes": [
     {
-      "data": [
-        ""
-      ],
-      "id": "8",
+      "id": "21",
       "op": {
-        "func": "",
+        "func": "/authorization.svp",
         "inputArgs": [
           {
             "desc": "",
@@ -103,10 +106,93 @@
             "type": ""
           }
         ],
-        "package": "start"
+        "package": "import"
       },
-      "x": 2676,
-      "y": 93
+      "x": 2407,
+      "y": 439
+    },
+    {
+      "data": [
+        null,
+        "/subgraph/install",
+        "/subgraphInstall.svp",
+        "{}"
+      ],
+      "id": "25",
+      "name": "/subgraph/install",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "router入参",
+            "type": ""
+          },
+          {
+            "desc": "路由地址",
+            "type": "string"
+          },
+          {
+            "desc": "调用图路径",
+            "type": "string"
+          },
+          {
+            "desc": "高级设置",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "暂无",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 3352,
+      "y": 736
+    },
+    {
+      "data": [
+        null,
+        "/html",
+        "/test.svp",
+        "{\"html\":\"./html/index.html\"}"
+      ],
+      "id": "26",
+      "op": {
+        "func": "httpRouter",
+        "inputArgs": [
+          {
+            "desc": "router入参",
+            "type": ""
+          },
+          {
+            "desc": "路由地址",
+            "type": "string"
+          },
+          {
+            "desc": "调用图路径",
+            "type": "string"
+          },
+          {
+            "desc": "高级设置",
+            "type": "object"
+          }
+        ],
+        "inputCount": 4,
+        "outputCount": 1,
+        "outputType": [
+          {
+            "desc": "暂无",
+            "type": ""
+          }
+        ],
+        "package": "net"
+      },
+      "x": 3027,
+      "y": 291
     },
     {
       "data": [
@@ -258,42 +344,6 @@
     },
     {
       "data": [
-        null,
-        "0"
-      ],
-      "id": "18",
-      "op": {
-        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
-        "func": "eq",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": ""
-          },
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "inputCount": 2,
-        "outputCount": 2,
-        "outputType": [
-          {
-            "desc": "",
-            "type": ""
-          },
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "package": "condition"
-      },
-      "x": 2670,
-      "y": 400
-    },
-    {
-      "data": [
         "\"19\"",
         ""
       ],
@@ -367,29 +417,6 @@
       "y": 620
     },
     {
-      "id": "21",
-      "op": {
-        "func": "/authorization.svp",
-        "inputArgs": [
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "inputCount": 1,
-        "outputCount": 1,
-        "outputType": [
-          {
-            "desc": "",
-            "type": ""
-          }
-        ],
-        "package": "import"
-      },
-      "x": 2407,
-      "y": 439
-    },
-    {
       "data": [
         null,
         "/user/publish",
@@ -436,7 +463,7 @@
         null,
         "/subgraph/list",
         "/subgraphList.svp",
-        "{}"
+        "{\"header\":{\"Access-Control-Allow-Headers\":\"Content-Type, Authorization, X-Custom-Header, Upgrade-Insecure-Requests\"},\"cookies\":[{\"name\":\"username\",\"value\":\"kyo\"}]}"
       ],
       "id": "23",
       "name": "/subgraph/list",
@@ -475,45 +502,65 @@
     },
     {
       "data": [
-        null,
-        "/subgraph/install",
-        "/subgraphInstall.svp",
-        "{}"
+        ""
       ],
-      "id": "25",
-      "name": "/subgraph/install",
+      "id": "8",
       "op": {
-        "func": "httpRouter",
+        "func": "",
         "inputArgs": [
           {
-            "desc": "router入参",
+            "desc": "",
             "type": ""
-          },
-          {
-            "desc": "路由地址",
-            "type": "string"
-          },
-          {
-            "desc": "调用图路径",
-            "type": "string"
-          },
-          {
-            "desc": "高级设置",
-            "type": "object"
           }
         ],
-        "inputCount": 4,
+        "inputCount": 1,
         "outputCount": 1,
         "outputType": [
           {
-            "desc": "暂无",
+            "desc": "",
             "type": ""
           }
         ],
-        "package": "net"
+        "package": "start"
       },
-      "x": 3352,
-      "y": 736
+      "x": 2676,
+      "y": 93
+    },
+    {
+      "data": [
+        null,
+        "0"
+      ],
+      "id": "18",
+      "op": {
+        "desc": "判断两个输入是否相等，根据判断结果，执行不同路线的逻辑",
+        "func": "eq",
+        "inputArgs": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "inputCount": 2,
+        "outputCount": 2,
+        "outputType": [
+          {
+            "desc": "",
+            "type": ""
+          },
+          {
+            "desc": "",
+            "type": ""
+          }
+        ],
+        "package": "condition"
+      },
+      "x": 2670,
+      "y": 400
     }
   ]
 }
